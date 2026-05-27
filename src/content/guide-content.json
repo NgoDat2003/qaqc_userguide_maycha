@@ -3,9 +3,9 @@
   "version": "27/05/2026",
   "scope": "Hệ thống QA/QC UAT cho cửa hàng quản lý/nội bộ",
   "audience": "Admin, QA Manager, QC Audit, AM, Store Manager",
-  "notice": "Luồng cửa hàng nhượng quyền/Franchise đang phát triển. Tài liệu này chỉ hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ.",
+  "notice": "Tài liệu này tập trung hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ trong phạm vi UAT hiện tại.",
   "sourceDocument": "/downloads/huong-dan-su-dung-he-thong-qaqc-uat-27-05-2026.docx",
-  "imageCount": 56,
+  "imageCount": 54,
   "sections": [
     {
       "id": "overview",
@@ -15,7 +15,7 @@
         {
           "type": "table",
           "headers": [
-            "Luồng cửa hàng nhượng quyền/Franchise đang phát triển. Tài liệu này chỉ hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ."
+            "Tài liệu này tập trung hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ trong phạm vi UAT hiện tại."
           ],
           "rows": []
         }
@@ -163,7 +163,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dashboard hiện được hướng dẫn cho QA Manager để theo dõi tổng quan chất lượng QA/QC theo phạm vi được cấu hình."
+          "text": "Dashboard dùng để xem nhanh tình trạng vận hành theo từng vai trò. Tài liệu hiện cập nhật Dashboard QA Manager, QC và Store Manager; Dashboard AM sẽ bổ sung hình ảnh khi có ảnh chụp UAT."
         }
       ]
     },
@@ -227,6 +227,79 @@
           "src": "/assets/user-guide/figure-004.png",
           "alt": "Dashboard QA Manager",
           "caption": "Dashboard QA Manager"
+        }
+      ]
+    },
+    {
+      "id": "3-2-dashboard-qc",
+      "title": "3.2. Dashboard QC",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dashboard QC giúp QC theo dõi công việc được giao và hiệu suất cá nhân trong kỳ audit."
+        },
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản QC Audit.",
+            "Chọn Tổng quan ở sidebar.",
+            "Dùng bộ lọc Kỳ audit, Trạng thái bài chấm và Store nếu cần.",
+            "Xem các chỉ số: Việc được giao, Chưa chấm, Đang chấm, Đã submit, Lỗi/Risk đã ghi nhận.",
+            "Xem danh sách store được giao và tiến độ theo kế hoạch."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cần bổ sung ảnh Dashboard QC theo giao diện UAT mới."
+        }
+      ]
+    },
+    {
+      "id": "3-3-dashboard-store-manager",
+      "title": "3.3. Dashboard Store Manager",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dashboard Store Manager giúp SM theo dõi chất lượng cửa hàng và tình trạng Action Plan của cửa hàng mình."
+        },
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản Store Manager.",
+            "Chọn Tổng quan ở sidebar.",
+            "Lọc theo thời gian, checklist hoặc trạng thái Action Plan nếu cần.",
+            "Xem các chỉ số: Điểm gần nhất, Điểm trung bình kỳ, AP đang mở, AP quá hạn, Minh chứng khắc phục.",
+            "Xem lịch sử audit cửa hàng, lỗi nghiêm trọng/Risk/CCP và xu hướng điểm của cửa hàng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cần bổ sung ảnh Dashboard Store Manager theo giao diện UAT mới."
+        }
+      ]
+    },
+    {
+      "id": "3-4-dashboard-am",
+      "title": "3.4. Dashboard AM",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dashboard AM dùng để theo dõi tình hình chất lượng và Action Plan theo phạm vi cửa hàng AM phụ trách."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hiện chưa có hình ảnh Dashboard AM trong bộ ảnh UAT. Phần hình ảnh sẽ bổ sung sau khi có ảnh chụp xác nhận."
         }
       ]
     },
@@ -400,6 +473,16 @@
             "Lỗi thường không bắt buộc ảnh.",
             "QC nên thêm ảnh nếu lỗi cần đối chiếu lại hoặc cần chứng cứ rõ.",
             "RISK và CCP nhóm bắt buộc có ảnh minh chứng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lưu ý auto-pass"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nếu QC bật vi phạm nhưng không nhập số lỗi/lỗi lặp lớn hơn 0, hệ thống sẽ tự động đưa tiêu chí về Pass mặc định để tránh ghi nhận lỗi 0 điểm."
           ]
         },
         {
@@ -774,15 +857,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Action Plan dùng để theo dõi việc khắc phục sau audit. Store Manager là người quản lý nội dung khắc phục của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi của mình."
+          "text": "Action Plan dùng để theo dõi việc khắc phục sau audit. Store Manager quản lý nội dung khắc phục của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi của mình."
         }
       ]
     },
     {
-      "id": "6-1-tao-action-plan-sau-khi-xac-nhan-iem",
-      "title": "6.1. Tạo Action Plan Sau Khi Xác Nhận Điểm",
+      "id": "6-1-action-plan-tu-sinh-sau-khi-xac-nhan-iem",
+      "title": "6.1. Action Plan Tự Sinh Sau Khi Xác Nhận Điểm",
       "level": 2,
       "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Action Plan được hệ thống tự sinh sau khi Store Manager xác nhận điểm audit. Nếu bài có vi phạm, hệ thống tạo Action Plan; nếu không có vi phạm, hệ thống chỉ ghi nhận bài đã xác nhận."
+        },
         {
           "type": "label",
           "text": "Thao tác nghiệp vụ"
@@ -790,13 +877,29 @@
         {
           "type": "steps",
           "items": [
-            "QA Manager mở Kết quả audit.",
-            "Chọn bài audit đã hoàn thành.",
+            "Store Manager mở Kết quả audit.",
+            "Chọn bài audit đã nộp cần xác nhận điểm.",
             "Kiểm tra điểm, lỗi, RISK/CCP và ảnh minh chứng.",
-            "Chọn Xác nhận điểm khi kết quả đã được xác nhận.",
-            "Sau khi xác nhận điểm, hệ thống hiển thị thao tác Tạo Action Plan nếu bài audit có lỗi cần khắc phục.",
-            "Chọn Tạo Action Plan để tạo kế hoạch khắc phục cho cửa hàng."
+            "Chọn Xác nhận điểm.",
+            "Đọc popup xác nhận. Nếu cần kiểm tra lại, chọn Kiểm tra lại; nếu đồng ý, chọn Xác nhận điểm.",
+            "Sau khi xác nhận, nếu bài có vi phạm, hệ thống tự sinh Action Plan cho cửa hàng."
           ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Sau khi Store Manager xác nhận điểm, QA Manager không thể chỉnh sửa bài audit này nữa.",
+            "Không cần thao tác tạo Action Plan thủ công sau khi xác nhận điểm.",
+            "Store Manager tiếp tục vào Action Plan để cập nhật nội dung khắc phục và ảnh minh chứng khắc phục."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cần bổ sung ảnh popup Xác nhận điểm audit và màn Action Plan tự sinh sau xác nhận."
         }
       ]
     },
@@ -1100,13 +1203,13 @@
       ]
     },
     {
-      "id": "7-4-sao-chep-va-phat-hanh-ke-hoach-audit",
-      "title": "7.4. Sao Chép Và Phát Hành Kế Hoạch Audit",
+      "id": "7-4-sao-chep-cap-nhat-va-phat-hanh-ke-hoach-audit",
+      "title": "7.4. Sao Chép, Cập Nhật Và Phát Hành Kế Hoạch Audit",
       "level": 2,
       "blocks": [
         {
-          "type": "label",
-          "text": "Thao tác"
+          "type": "paragraph",
+          "text": "Sao chép kế hoạch"
         },
         {
           "type": "steps",
@@ -1119,16 +1222,22 @@
           ]
         },
         {
-          "type": "image",
-          "src": "/assets/user-guide/figure-034.png",
-          "alt": "Form sao chép kế hoạch audit",
-          "caption": "Form sao chép kế hoạch audit"
+          "type": "paragraph",
+          "text": "Cập nhật kế hoạch đang mở"
         },
         {
-          "type": "image",
-          "src": "/assets/user-guide/figure-035.png",
-          "alt": "Kế hoạch audit được sao chép",
-          "caption": "Kế hoạch audit được sao chép"
+          "type": "steps",
+          "items": [
+            "Mở chi tiết kế hoạch audit đang ở trạng thái Đang mở.",
+            "Chọn Thêm store để bổ sung cửa hàng phát sinh.",
+            "Tìm kiếm hoặc lọc cửa hàng cần thêm.",
+            "Chọn cửa hàng, gán QC Audit phụ trách và lưu cập nhật.",
+            "Hệ thống bổ sung assignment cho cửa hàng mới mà không cần tạo kế hoạch phụ riêng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lưu ý: chỉ cập nhật các assignment/cửa hàng chưa audit để tránh ảnh hưởng dữ liệu đã chấm."
         }
       ]
     },
@@ -1163,7 +1272,22 @@
             "Chọn nhóm tiêu chí.",
             "Nhập mô tả/diễn giải lỗi.",
             "Chọn loại tiêu chí Thường.",
-            "Cấu hình điểm hoặc thông tin liên quan theo cơ chế điểm của checklist.",
+            "Nhập điểm cơ sở (dbase), hệ số/trần điểm trừ và các thông tin điểm theo cơ chế của checklist."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lưu ý điểm tiêu chí"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Điểm trừ tối đa của tiêu chí được hệ thống tính từ điểm cơ sở và hệ số/trần điểm trừ. Khi QC ghi nhận nhiều lỗi, điểm trừ của tiêu chí không vượt quá trần đã cấu hình."
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
             "Chọn loại cửa hàng áp dụng và phạm vi áp dụng.",
             "Lưu khi dữ liệu đúng."
           ]
@@ -1226,25 +1350,25 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-036.png",
+          "src": "/assets/user-guide/figure-034.png",
           "alt": "Danh sách tiêu chí",
           "caption": "Danh sách tiêu chí"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-037.png",
+          "src": "/assets/user-guide/figure-035.png",
           "alt": "Form tạo tiêu chí",
           "caption": "Form tạo tiêu chí"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-038.png",
+          "src": "/assets/user-guide/figure-036.png",
           "alt": "Form tạo tiêu chí khi chọn loại Risk",
           "caption": "Form tạo tiêu chí khi chọn loại Risk"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-039.png",
+          "src": "/assets/user-guide/figure-037.png",
           "alt": "Form tạo tiêu chí khi chọn loại CCP nhóm",
           "caption": "Form tạo tiêu chí khi chọn loại CCP nhóm"
         }
@@ -1303,48 +1427,49 @@
           "items": [
             "Maycha, Tam Hảo và Cloud nội bộ dùng chung một cấu trúc checklist nội bộ.",
             "Tên brand trong checklist nên dùng wording động theo brand, tránh tách checklist chỉ vì khác chữ brand.",
-            "Tổng tỷ trọng nhóm tiêu chí phải bằng 100%."
+            "Tổng tỷ trọng nhóm tiêu chí phải bằng 100%.",
+            "Trong phạm vi tài liệu này, checklist hướng dẫn cho cửa hàng quản lý/nội bộ. Khi tạo checklist hoặc kế hoạch, cần chọn đúng một loại cửa hàng áp dụng theo cấu hình hệ thống."
           ]
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-040.png",
+          "src": "/assets/user-guide/figure-038.png",
           "alt": "Danh sách checklist",
           "caption": "Danh sách checklist"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-041.png",
+          "src": "/assets/user-guide/figure-039.png",
           "alt": "Chi tiết checklist",
           "caption": "Chi tiết checklist"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-042.png",
+          "src": "/assets/user-guide/figure-040.png",
           "alt": "Chi tiết checklist nháp có cấu hình section và trọng số",
           "caption": "Chi tiết checklist nháp có cấu hình section và trọng số"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-043.png",
+          "src": "/assets/user-guide/figure-041.png",
           "alt": "Modal chọn danh sách tiêu chí cho section",
           "caption": "Modal chọn danh sách tiêu chí cho section"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-044.png",
+          "src": "/assets/user-guide/figure-042.png",
           "alt": "Tiêu chí đã được chọn trong modal",
           "caption": "Tiêu chí đã được chọn trong modal"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-045.png",
+          "src": "/assets/user-guide/figure-043.png",
           "alt": "Tiêu chí đã được đưa vào section",
           "caption": "Tiêu chí đã được đưa vào section"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-046.png",
+          "src": "/assets/user-guide/figure-044.png",
           "alt": "Checklist sau khi lưu thay đổi",
           "caption": "Checklist sau khi lưu thay đổi"
         }
@@ -1371,7 +1496,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-047.png",
+          "src": "/assets/user-guide/figure-045.png",
           "alt": "Form tạo phiên bản checklist mới",
           "caption": "Form tạo phiên bản checklist mới"
         }
@@ -1384,7 +1509,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Báo cáo giúp theo dõi chất lượng QA/QC theo cửa hàng, thương hiệu, AM, loại cửa hàng và kỳ dữ liệu."
+          "text": "Báo cáo hiện được thể hiện chủ yếu trên Dashboard theo từng vai trò, giúp theo dõi chất lượng QA/QC theo cửa hàng, thương hiệu, AM, loại cửa hàng và kỳ dữ liệu."
         },
         {
           "type": "paragraph",
@@ -1464,7 +1589,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-048.png",
+          "src": "/assets/user-guide/figure-046.png",
           "alt": "Popup thông báo",
           "caption": "Popup thông báo"
         }
@@ -1501,13 +1626,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-049.png",
+          "src": "/assets/user-guide/figure-047.png",
           "alt": "Danh sách thương hiệu",
           "caption": "Danh sách thương hiệu"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-050.png",
+          "src": "/assets/user-guide/figure-048.png",
           "alt": "Form tạo thương hiệu",
           "caption": "Form tạo thương hiệu"
         }
@@ -1533,13 +1658,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-051.png",
+          "src": "/assets/user-guide/figure-049.png",
           "alt": "Danh sách cửa hàng",
           "caption": "Danh sách cửa hàng"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-052.png",
+          "src": "/assets/user-guide/figure-050.png",
           "alt": "Form tạo cửa hàng",
           "caption": "Form tạo cửa hàng"
         }
@@ -1564,13 +1689,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-053.png",
+          "src": "/assets/user-guide/figure-051.png",
           "alt": "Danh sách địa bàn",
           "caption": "Danh sách địa bàn"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-054.png",
+          "src": "/assets/user-guide/figure-052.png",
           "alt": "Form tạo địa bàn",
           "caption": "Form tạo địa bàn"
         }
@@ -1591,12 +1716,18 @@
             "Chọn Người dùng.",
             "Xem danh sách tài khoản.",
             "Tạo mới hoặc chỉnh sửa người dùng nếu cần.",
-            "Cấu hình thông tin tài khoản, vai trò và phạm vi dữ liệu."
+            "Cấu hình thông tin tài khoản và vai trò. Phạm vi dữ liệu của Store Manager được liên kết theo cửa hàng trên màn Cửa hàng."
           ]
         },
         {
           "type": "paragraph",
           "text": "Admin xem và cấu hình được"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Store Manager không gán thủ công phạm vi cửa hàng trên form Người dùng; tài khoản/quyền SM đi theo thông tin cấu hình tại màn Cửa hàng."
+          ]
         },
         {
           "type": "table",
@@ -1621,13 +1752,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-055.png",
+          "src": "/assets/user-guide/figure-053.png",
           "alt": "Danh sách người dùng",
           "caption": "Danh sách người dùng"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-056.png",
+          "src": "/assets/user-guide/figure-054.png",
           "alt": "Form tạo người dùng",
           "caption": "Form tạo người dùng"
         }
@@ -1646,7 +1777,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tài liệu hướng dẫn luồng vận hành cho cửa hàng quản lý/nội bộ. Phần cửa hàng nhượng quyền/Franchise đang phát triển và chưa nằm trong phạm vi thao tác của tài liệu này."
+          "text": "Tài liệu hướng dẫn luồng vận hành cho cửa hàng quản lý/nội bộ đang dùng trong phạm vi UAT hiện tại."
         }
       ]
     },
@@ -1712,7 +1843,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Theo luồng vận hành hiện tại, QA Manager tạo kế hoạch bổ sung cho cửa hàng phát sinh để không ảnh hưởng các assignment đã triển khai trong kế hoạch trước."
+          "text": "QA Manager có thể mở kế hoạch đang ở trạng thái Đang mở, thêm trực tiếp cửa hàng phát sinh, gán QC Audit phụ trách và lưu cập nhật. Các assignment đã audit cần giữ nguyên để tránh ảnh hưởng dữ liệu đã chấm."
         }
       ]
     },
@@ -1723,7 +1854,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sau khi kết quả audit được xác nhận điểm, hệ thống cho phép tạo Action Plan nếu có nội dung cần khắc phục. Store Manager quản lý nội dung khắc phục và minh chứng của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi được phân quyền."
+          "text": "Sau khi Store Manager xác nhận điểm, nếu bài audit có vi phạm, hệ thống tự sinh Action Plan. Store Manager quản lý nội dung khắc phục và minh chứng của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi được phân quyền."
         }
       ]
     },
@@ -1746,6 +1877,28 @@
         {
           "type": "paragraph",
           "text": "Người dùng chọn biểu tượng chuông ở góc phải trên cùng để xem các thông báo mới liên quan đến kế hoạch audit hoặc nội dung được hệ thống gửi đến tài khoản."
+        }
+      ]
+    },
+    {
+      "id": "12-11-tai-khoan-store-manager-uoc-lien-ket-voi-cua-hang-nhu-the-nao",
+      "title": "12.11. Tài khoản Store Manager được liên kết với cửa hàng như thế nào?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thông tin Store Manager được cấu hình tại màn Cửa hàng. Khi cửa hàng có email và mật khẩu tạm của SM, hệ thống liên kết tài khoản SM với đúng cửa hàng đó; không gán thủ công phạm vi cửa hàng trên form Người dùng."
+        }
+      ]
+    },
+    {
+      "id": "12-12-neu-qc-bat-vi-pham-nhung-khong-nhap-so-loi-thi-sao",
+      "title": "12.12. Nếu QC bật vi phạm nhưng không nhập số lỗi thì sao?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nếu QC bật vi phạm nhưng không nhập số lỗi/lỗi lặp lớn hơn 0, hệ thống đưa tiêu chí về Pass mặc định để tránh ghi nhận lỗi 0 điểm."
         }
       ]
     }

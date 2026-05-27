@@ -231,7 +231,7 @@ def build_content() -> dict:
         "version": "27/05/2026",
         "scope": "Hệ thống QA/QC UAT cho cửa hàng quản lý/nội bộ",
         "audience": "Admin, QA Manager, QC Audit, AM, Store Manager",
-        "notice": "Luồng cửa hàng nhượng quyền/Franchise đang phát triển. Tài liệu này chỉ hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ.",
+        "notice": "Tài liệu này tập trung hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ trong phạm vi UAT hiện tại.",
         "sourceDocument": f"/downloads/{SOURCE_DOCX.name}",
         "imageCount": image_index,
         "sections": sections,

@@ -41,7 +41,7 @@ The script regenerates:
 
 Deploy this folder as a standalone Vercel project:
 
-- Root directory: `outputs/qaqc-user-guide-web`
+- Root directory: repo root / leave blank when importing `qaqc_userguide_maycha`
 - Framework preset: Vite
 - Build command: `npm run build`
 - Output directory: `dist`
