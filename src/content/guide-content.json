@@ -1,0 +1,1753 @@
+{
+  "title": "Hướng Dẫn Sử Dụng Hệ Thống QA/QC UAT",
+  "version": "27/05/2026",
+  "scope": "Hệ thống QA/QC UAT cho cửa hàng quản lý/nội bộ",
+  "audience": "Admin, QA Manager, QC Audit, AM, Store Manager",
+  "notice": "Luồng cửa hàng nhượng quyền/Franchise đang phát triển. Tài liệu này chỉ hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ.",
+  "sourceDocument": "/downloads/huong-dan-su-dung-he-thong-qaqc-uat-27-05-2026.docx",
+  "imageCount": 56,
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Tổng quan",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Luồng cửa hàng nhượng quyền/Franchise đang phát triển. Tài liệu này chỉ hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ."
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "id": "1-ang-nhap-va-oi-mat-khau",
+      "title": "1. Đăng Nhập Và Đổi Mật Khẩu",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Người dùng đăng nhập bằng email và mật khẩu được cấp. Sau khi đăng nhập, hệ thống điều hướng theo quyền của tài khoản."
+        }
+      ]
+    },
+    {
+      "id": "1-1-ang-nhap",
+      "title": "1.1. Đăng Nhập",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Truy cập trang UAT.",
+            "Nhập email vào ô Email.",
+            "Nhập mật khẩu vào ô Mật khẩu.",
+            "Chọn Đăng nhập."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Người dùng thấy"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Form đăng nhập có hai trường email, mật khẩu và nút đăng nhập.",
+            "Nếu thông tin đúng, hệ thống mở màn hình theo vai trò hiện tại.",
+            "Nếu thông tin sai, hệ thống hiển thị cảnh báo đăng nhập không thành công."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-001.png",
+          "alt": "Màn hình đăng nhập",
+          "caption": "Màn hình đăng nhập"
+        }
+      ]
+    },
+    {
+      "id": "1-2-oi-mat-khau-tu-menu-tai-khoan",
+      "title": "1.2. Đổi Mật Khẩu Từ Menu Tài Khoản",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Sau khi đăng nhập, chọn avatar hoặc biểu tượng tài khoản ở góc phải trên cùng.",
+            "Chọn Đổi mật khẩu.",
+            "Nhập Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới.",
+            "Chọn Cập nhật mật khẩu nếu muốn lưu thay đổi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Người dùng thấy"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Menu tài khoản hiển thị tên người dùng, vai trò, thao tác đổi mật khẩu và đăng xuất.",
+            "Màn đổi mật khẩu hiển thị yêu cầu bảo mật và ba trường nhập mật khẩu."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-002.png",
+          "alt": "Menu tài khoản có thao tác đổi mật khẩu",
+          "caption": "Menu tài khoản có thao tác đổi mật khẩu"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-003.png",
+          "alt": "Màn hình đổi mật khẩu",
+          "caption": "Màn hình đổi mật khẩu"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Hệ thống hiện không có mục Hồ sơ cá nhân riêng trong phạm vi đã kiểm tra. Người dùng đổi mật khẩu từ menu tài khoản."
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "id": "2-vai-tro-nguoi-dung",
+      "title": "2. Vai Trò Người Dùng",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Vai trò",
+            "Trách nhiệm chính"
+          ],
+          "rows": [
+            [
+              "Admin",
+              "Quản trị master data, thương hiệu, cửa hàng, địa bàn, người dùng và phân quyền"
+            ],
+            [
+              "QA Manager",
+              "Quản lý vận hành QA/QC: tiêu chí, checklist, kế hoạch audit, kết quả audit và Action Plan"
+            ],
+            [
+              "QC Audit",
+              "Xem bài audit được phân công, thực hiện checklist, ghi nhận lỗi, ghi chú và ảnh minh chứng"
+            ],
+            [
+              "AM",
+              "Theo dõi kết quả audit và Action Plan trong phạm vi cửa hàng/khu vực phụ trách"
+            ],
+            [
+              "Store Manager",
+              "Xem kết quả cửa hàng mình và quản lý Action Plan khắc phục"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3-dashboard",
+      "title": "3. Dashboard",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dashboard hiện được hướng dẫn cho QA Manager để theo dõi tổng quan chất lượng QA/QC theo phạm vi được cấu hình."
+        }
+      ]
+    },
+    {
+      "id": "3-1-dashboard-qa-manager",
+      "title": "3.1. Dashboard QA Manager",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản QA Manager.",
+            "Chọn Tổng quan ở sidebar.",
+            "Điều chỉnh bộ lọc nếu cần: chu kỳ, kiểu điểm, thương hiệu, AM, loại cửa hàng, kỳ dữ liệu.",
+            "Xem các chỉ số và biểu đồ trên dashboard."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Bộ lọc",
+              "Chu kỳ, kiểu điểm, thương hiệu, AM, loại cửa hàng, kỳ dữ liệu"
+            ],
+            [
+              "KPI tổng quan",
+              "Điểm trung bình, cửa hàng đã chấm, tổng lỗi, RISK/CCP, lỗi lặp lại"
+            ],
+            [
+              "Xu hướng điểm",
+              "Biểu đồ điểm trung bình theo tuần hoặc theo kỳ được chọn"
+            ],
+            [
+              "Audit Insight",
+              "Tỷ lệ điểm đạt, tổng điểm đạt và phân bổ điểm"
+            ],
+            [
+              "Phân tích vi phạm",
+              "Nhóm lỗi, số lỗi, tỷ lệ, điểm trừ, lỗi lặp"
+            ],
+            [
+              "Top lỗi",
+              "Cửa hàng có lỗi lặp nhiều, tiêu chí bị đánh lỗi nhiều"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-004.png",
+          "alt": "Dashboard QA Manager",
+          "caption": "Dashboard QA Manager"
+        }
+      ]
+    },
+    {
+      "id": "4-qc-thuc-hien-audit-tren-mobile",
+      "title": "4. QC Thực Hiện Audit Trên Mobile",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QC dùng mobile để xem bài được phân công, mở bài audit, đánh dấu lỗi, thêm ghi chú/ảnh và gửi bài."
+        }
+      ]
+    },
+    {
+      "id": "4-1-xem-danh-sach-bai-audit-uoc-phan-cong",
+      "title": "4.1. Xem Danh Sách Bài Audit Được Phân Công",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản QC.",
+            "Chọn Thực hiện audit.",
+            "Kiểm tra danh sách cửa hàng được phân công.",
+            "Dùng tab/trạng thái để phân biệt bài chờ thực hiện, đang thực hiện hoặc hoàn thành.",
+            "Chọn Thực hiện đánh giá để mở bài cần chấm."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QC xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Thông tin",
+            "Ý nghĩa"
+          ],
+          "rows": [
+            [
+              "Mã cửa hàng và tên cửa hàng",
+              "Xác định đúng địa điểm cần audit"
+            ],
+            [
+              "Địa chỉ",
+              "Hỗ trợ QC kiểm tra đúng cửa hàng"
+            ],
+            [
+              "Kế hoạch audit",
+              "Tên kế hoạch và checklist áp dụng"
+            ],
+            [
+              "Kỳ audit",
+              "Thời gian hiệu lực của bài audit"
+            ],
+            [
+              "Trạng thái",
+              "Chờ thực hiện, đang thực hiện hoặc hoàn thành"
+            ],
+            [
+              "Thao tác",
+              "Thực hiện đánh giá hoặc xem lại"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-005.png",
+          "alt": "Danh sách bài audit được phân công",
+          "caption": "Danh sách bài audit được phân công"
+        }
+      ]
+    },
+    {
+      "id": "4-2-mo-bai-audit",
+      "title": "4.2. Mở Bài Audit",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại danh sách bài audit, chọn Thực hiện đánh giá.",
+            "Xem thông tin phiên audit.",
+            "Cuộn xuống danh sách nhóm/section tiêu chí.",
+            "Mở section cần kiểm tra.",
+            "Chọn một tiêu chí để mở popup đánh giá."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QC xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Thông tin phiên audit",
+              "Cửa hàng, kế hoạch, địa chỉ, người thực hiện audit"
+            ],
+            [
+              "Tóm tắt phiên audit",
+              "Điểm tạm tính, mục vi phạm, lỗi lặp, CCP, RISK, lưu gần nhất"
+            ],
+            [
+              "Thanh thao tác",
+              "Lưu nháp, hoàn tất audit, đánh RISK, CCP nhóm"
+            ],
+            [
+              "Danh sách tiêu chí",
+              "Các nhóm/section và tiêu chí cần kiểm tra"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-006.png",
+          "alt": "Bài audit sau khi bắt đầu",
+          "caption": "Bài audit sau khi bắt đầu"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-007.png",
+          "alt": "Section tiêu chí được mở",
+          "caption": "Section tiêu chí được mở"
+        }
+      ]
+    },
+    {
+      "id": "4-3-cham-mot-tieu-chi-thuong",
+      "title": "4.3. Chấm Một Tiêu Chí Thường",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn tiêu chí cần kiểm tra.",
+            "Đọc mô tả tiêu chí.",
+            "Nếu không phát sinh lỗi, đóng popup hoặc giữ trạng thái không vi phạm.",
+            "Nếu có lỗi, bật Đánh dấu vi phạm.",
+            "Nhập Số lỗi ghi nhận.",
+            "Chọn Lỗi lặp ghi nhận nếu lỗi này là lỗi lặp.",
+            "Nhập ghi chú mô tả tình trạng lỗi.",
+            "Thêm ảnh minh chứng nếu cần.",
+            "Chọn Xong để lưu thông tin tiêu chí."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Quy tắc ảnh"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Lỗi thường không bắt buộc ảnh.",
+            "QC nên thêm ảnh nếu lỗi cần đối chiếu lại hoặc cần chứng cứ rõ.",
+            "RISK và CCP nhóm bắt buộc có ảnh minh chứng."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-008.png",
+          "alt": "Popup đánh giá tiêu chí thường",
+          "caption": "Popup đánh giá tiêu chí thường"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-009.png",
+          "alt": "Đánh dấu tiêu chí vi phạm",
+          "caption": "Đánh dấu tiêu chí vi phạm"
+        }
+      ]
+    },
+    {
+      "id": "4-4-them-anh-minh-chung",
+      "title": "4.4. Thêm Ảnh Minh Chứng",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại popup tiêu chí, chọn Quản lý ảnh minh chứng.",
+            "Chọn chụp ảnh hoặc tải ảnh từ thiết bị.",
+            "Kiểm tra ảnh đã được gắn vào tiêu chí.",
+            "Quay lại popup tiêu chí và chọn Xong."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-010.png",
+          "alt": "Quản lý ảnh minh chứng",
+          "caption": "Quản lý ảnh minh chứng"
+        }
+      ]
+    },
+    {
+      "id": "4-5-ghi-nhan-risk",
+      "title": "4.5. Ghi Nhận RISK",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "RISK là lỗi ảnh hưởng toàn bài audit. Khi phát sinh RISK, QC cần ghi nhận đủ lý do, ghi chú và ảnh minh chứng."
+        },
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại màn bài audit, chọn Đánh Risk.",
+            "Chọn lý do RISK phù hợp.",
+            "Nhập ghi chú mô tả bối cảnh.",
+            "Chụp hoặc tải ảnh minh chứng.",
+            "Chọn Cập nhật Risk sau khi kiểm tra đầy đủ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "RISK bắt buộc có ảnh minh chứng.",
+            "Khi áp dụng RISK, toàn bài audit được xử lý theo rule điểm RISK.",
+            "QC vẫn nên ghi nhận đầy đủ các lỗi khác để có dữ liệu theo dõi."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-011.png",
+          "alt": "Danh sách lý do RISK",
+          "caption": "Danh sách lý do RISK"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-012.png",
+          "alt": "Chi tiết RISK có trường ghi chú và ảnh",
+          "caption": "Chi tiết RISK có trường ghi chú và ảnh"
+        }
+      ]
+    },
+    {
+      "id": "4-6-ghi-nhan-ccp-nhom",
+      "title": "4.6. Ghi Nhận CCP Nhóm",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "CCP nhóm dùng khi phát sinh lỗi nghiêm trọng ở cấp nhóm tiêu chí. Khi áp dụng CCP nhóm, nhóm tương ứng bị tính điểm theo rule CCP nhưng vẫn giữ trace lỗi theo từng item."
+        },
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại màn bài audit, chọn CCP nhóm.",
+            "Chọn nhóm tiêu chí phát sinh CCP.",
+            "Chọn lý do CCP nhóm.",
+            "Nhập ghi chú.",
+            "Chụp hoặc tải ảnh minh chứng.",
+            "Chọn Áp dụng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "CCP nhóm bắt buộc có ảnh minh chứng.",
+            "Checklist cần có catalog lý do CCP nhóm tương ứng để thao tác đủ flow.",
+            "Tỷ trọng nhóm có thể cấu hình theo checklist, với điều kiện tổng tỷ trọng các nhóm bằng 100%."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-013.png",
+          "alt": "Danh sách nhóm CCP",
+          "caption": "Danh sách nhóm CCP"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-014.png",
+          "alt": "Chi tiết lý do CCP nhóm",
+          "caption": "Chi tiết lý do CCP nhóm"
+        }
+      ]
+    },
+    {
+      "id": "4-7-luu-nhap-va-gui-bai",
+      "title": "4.7. Lưu Nháp Và Gửi Bài",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lưu nháp"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Trong quá trình audit, chọn Lưu nháp.",
+            "Hệ thống giữ lại dữ liệu đã nhập.",
+            "QC có thể quay lại tiếp tục chấm trước khi hoàn tất."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gửi bài"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Kiểm tra lại các tiêu chí đã đánh lỗi.",
+            "Kiểm tra RISK/CCP nhóm nếu có.",
+            "Kiểm tra ảnh bắt buộc với RISK và CCP nhóm.",
+            "Chọn Hoàn tất audit.",
+            "Xác nhận gửi bài nếu hệ thống hiển thị popup xác nhận."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4-8-xem-lai-bai-a-thuc-hien",
+      "title": "4.8. Xem Lại Bài Đã Thực Hiện",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Kết quả audit.",
+            "Mở bài đã hoàn thành.",
+            "Xem lại điểm, lỗi, ảnh minh chứng và thông tin bài audit."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-015.png",
+          "alt": "QC xem danh sách kết quả audit",
+          "caption": "QC xem danh sách kết quả audit"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-016.png",
+          "alt": "QC xem chi tiết kết quả audit",
+          "caption": "QC xem chi tiết kết quả audit"
+        }
+      ]
+    },
+    {
+      "id": "5-ket-qua-audit-va-chinh-sua-ket-qua",
+      "title": "5. Kết Quả Audit Và Chỉnh Sửa Kết Quả",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QA Manager dùng màn Kết quả audit để theo dõi các bài đã chấm, mở chi tiết kết quả và xử lý chỉnh sửa khi cần."
+        }
+      ]
+    },
+    {
+      "id": "5-1-xem-danh-sach-ket-qua",
+      "title": "5.1. Xem Danh Sách Kết Quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng QA Manager.",
+            "Chọn Kết quả audit.",
+            "Dùng bộ lọc/tìm kiếm nếu cần.",
+            "Chọn một bài audit để xem chi tiết."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Tổng quan",
+              "Tổng phiên audit, số bài đã nộp/nháp, điểm trung bình, số RISK, tổng vi phạm"
+            ],
+            [
+              "Danh sách",
+              "Cửa hàng, người audit, checklist, điểm, số vi phạm, trạng thái, ngày thực hiện"
+            ],
+            [
+              "Thao tác",
+              "Mở chi tiết bài audit"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-017.png",
+          "alt": "QA Manager - danh sách kết quả audit",
+          "caption": "QA Manager - danh sách kết quả audit"
+        }
+      ]
+    },
+    {
+      "id": "5-2-xem-chi-tiet-ket-qua",
+      "title": "5.2. Xem Chi Tiết Kết Quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại danh sách kết quả, mở một bài audit.",
+            "Xem điểm tổng và breakdown nhóm.",
+            "Kiểm tra lỗi, ghi chú và ảnh minh chứng.",
+            "Kiểm tra thông tin cửa hàng, checklist, người audit và thời gian nộp."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Audit Insight",
+              "Điểm tổng, tỷ lệ điểm đạt, số lỗi, số ảnh minh chứng"
+            ],
+            [
+              "Breakdown nhóm",
+              "Điểm/tỷ lệ theo nhóm, RISK/CCP, lỗi lặp"
+            ],
+            [
+              "Thông tin chung",
+              "Cửa hàng, người audit, checklist, ngày mở và ngày nộp"
+            ],
+            [
+              "Chi tiết lỗi",
+              "Tiêu chí lỗi, ghi chú, ảnh minh chứng và trạng thái"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-018.png",
+          "alt": "QA Manager - chi tiết kết quả audit",
+          "caption": "QA Manager - chi tiết kết quả audit"
+        }
+      ]
+    },
+    {
+      "id": "5-3-mo-chinh-sua-ket-qua",
+      "title": "5.3. Mở Chỉnh Sửa Kết Quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở chi tiết bài audit.",
+            "Chọn thao tác chỉnh sửa nếu tài khoản có quyền.",
+            "Hệ thống chuyển sang chế độ chỉnh sửa.",
+            "Khi lưu thay đổi, hệ thống yêu cầu nhập lý do chỉnh sửa.",
+            "Chỉ xác nhận lưu khi đã có quyết định nghiệp vụ rõ."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lưu ý vận hành"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Trước khi Store Manager xác nhận điểm, QA Manager có thể cần chỉnh sửa trong trường hợp cửa hàng khiếu nại chấm sai.",
+            "Sau khi Store Manager xác nhận điểm hoặc Action Plan bước tiếp theo đã được chốt, bài audit cần được khóa theo rule vận hành để tránh xung đột dữ liệu.",
+            "Tài liệu chỉ hướng dẫn mở chế độ chỉnh sửa và popup lý do, không hướng dẫn sửa dữ liệu thật trên UAT."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-019.png",
+          "alt": "QA Manager - chế độ chỉnh sửa kết quả",
+          "caption": "QA Manager - chế độ chỉnh sửa kết quả"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-020.png",
+          "alt": "QA Manager - popup lý do chỉnh sửa",
+          "caption": "QA Manager - popup lý do chỉnh sửa"
+        }
+      ]
+    },
+    {
+      "id": "6-action-plan",
+      "title": "6. Action Plan",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Action Plan dùng để theo dõi việc khắc phục sau audit. Store Manager là người quản lý nội dung khắc phục của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi của mình."
+        }
+      ]
+    },
+    {
+      "id": "6-1-tao-action-plan-sau-khi-xac-nhan-iem",
+      "title": "6.1. Tạo Action Plan Sau Khi Xác Nhận Điểm",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác nghiệp vụ"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "QA Manager mở Kết quả audit.",
+            "Chọn bài audit đã hoàn thành.",
+            "Kiểm tra điểm, lỗi, RISK/CCP và ảnh minh chứng.",
+            "Chọn Xác nhận điểm khi kết quả đã được xác nhận.",
+            "Sau khi xác nhận điểm, hệ thống hiển thị thao tác Tạo Action Plan nếu bài audit có lỗi cần khắc phục.",
+            "Chọn Tạo Action Plan để tạo kế hoạch khắc phục cho cửa hàng."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6-2-qa-manager-theo-doi-action-plan",
+      "title": "6.2. QA Manager Theo Dõi Action Plan",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Action Plan.",
+            "Lọc hoặc tìm kế hoạch cần xem.",
+            "Mở chi tiết để theo dõi trạng thái xử lý."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Danh sách",
+              "Cửa hàng, audit liên quan, số lỗi, tiến độ, trạng thái"
+            ],
+            [
+              "Chi tiết",
+              "Lỗi cần khắc phục, nội dung xử lý, người phụ trách, deadline, minh chứng"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-021.png",
+          "alt": "QA Manager - danh sách Action Plan",
+          "caption": "QA Manager - danh sách Action Plan"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-022.png",
+          "alt": "QA Manager - chi tiết Action Plan",
+          "caption": "QA Manager - chi tiết Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "6-3-am-theo-doi-action-plan",
+      "title": "6.3. AM Theo Dõi Action Plan",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản AM.",
+            "Chọn Action Plan.",
+            "Mở Action Plan trong phạm vi phụ trách.",
+            "Theo dõi nội dung khắc phục và tiến độ xử lý."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-023.png",
+          "alt": "AM - danh sách Action Plan",
+          "caption": "AM - danh sách Action Plan"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-024.png",
+          "alt": "AM - chi tiết Action Plan",
+          "caption": "AM - chi tiết Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "6-4-store-manager-quan-ly-action-plan",
+      "title": "6.4. Store Manager Quản Lý Action Plan",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng tài khoản Store Manager.",
+            "Chọn Action Plan.",
+            "Mở kế hoạch cần xử lý.",
+            "Nhập nguyên nhân không đạt.",
+            "Nhập hành động khắc phục.",
+            "Nhập người thực hiện và ngày hoàn thành.",
+            "Chọn Thêm ảnh để bổ sung minh chứng khắc phục nếu có.",
+            "Lưu hoặc gửi cập nhật theo trạng thái màn hình."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Store Manager xem và nhập được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Danh sách AP",
+              "Số kế hoạch đang mở, tiến độ, số vi phạm cần xử lý, trạng thái"
+            ],
+            [
+              "Chi tiết AP",
+              "Lỗi cần khắc phục, nguyên nhân, hành động, người thực hiện, hạn hoàn thành"
+            ],
+            [
+              "Minh chứng",
+              "Ảnh khắc phục qua thao tác thêm ảnh"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-025.png",
+          "alt": "Store Manager - danh sách Action Plan có dữ liệu",
+          "caption": "Store Manager - danh sách Action Plan có dữ liệu"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-026.png",
+          "alt": "Store Manager - chi tiết Action Plan",
+          "caption": "Store Manager - chi tiết Action Plan"
+        }
+      ]
+    },
+    {
+      "id": "7-ke-hoach-audit",
+      "title": "7. Kế Hoạch Audit",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QA Manager dùng màn Kế hoạch audit để tạo kế hoạch, phân công QC, phát hành và theo dõi danh sách cửa hàng trong kế hoạch."
+        }
+      ]
+    },
+    {
+      "id": "7-1-xem-danh-sach-ke-hoach",
+      "title": "7.1. Xem Danh Sách Kế Hoạch",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Đăng nhập bằng QA Manager.",
+            "Chọn Kế hoạch audit.",
+            "Xem danh sách kế hoạch hiện có.",
+            "Mở kế hoạch cần xem chi tiết."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Thông tin",
+            "Ý nghĩa"
+          ],
+          "rows": [
+            [
+              "Tên kế hoạch",
+              "Tên kỳ audit"
+            ],
+            [
+              "Kỳ audit",
+              "Thời gian áp dụng"
+            ],
+            [
+              "Checklist",
+              "Checklist được dùng để chấm"
+            ],
+            [
+              "Số cửa hàng",
+              "Tổng cửa hàng trong kế hoạch"
+            ],
+            [
+              "Trạng thái",
+              "Nháp, phát hành, đang mở hoặc đã đóng"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-027.png",
+          "alt": "Danh sách kế hoạch audit",
+          "caption": "Danh sách kế hoạch audit"
+        }
+      ]
+    },
+    {
+      "id": "7-2-xem-chi-tiet-ke-hoach",
+      "title": "7.2. Xem Chi Tiết Kế Hoạch",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại danh sách kế hoạch, mở một kế hoạch.",
+            "Xem thông tin kế hoạch.",
+            "Kiểm tra danh sách cửa hàng và QC được phân công.",
+            "Theo dõi trạng thái từng assignment."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-028.png",
+          "alt": "Chi tiết kế hoạch audit",
+          "caption": "Chi tiết kế hoạch audit"
+        }
+      ]
+    },
+    {
+      "id": "7-3-tao-ke-hoach-audit",
+      "title": "7.3. Tạo Kế Hoạch Audit",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác từng bước"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Tạo kế hoạch audit mới.",
+            "Nhập Tên kỳ audit.",
+            "Chọn Kỳ audit.",
+            "Chọn Checklist.",
+            "Chọn Thêm store để mở popup chọn cửa hàng.",
+            "Tìm kiếm hoặc lọc cửa hàng theo thương hiệu, AM, tỉnh/thành, xã/phường.",
+            "Tick một hoặc nhiều cửa hàng cần đưa vào kế hoạch.",
+            "Chọn Thêm store để đưa danh sách cửa hàng vào kế hoạch.",
+            "Với từng cửa hàng trong danh sách, chọn QC audit phụ trách.",
+            "Kiểm tra lại danh sách cửa hàng, QC được phân công và thời gian audit.",
+            "Chọn Lưu nháp nếu chưa phát hành ngay.",
+            "Chọn Phát hành kế hoạch khi kế hoạch đã đủ dữ liệu để QC nhận assignment."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-029.png",
+          "alt": "Form tạo kế hoạch audit",
+          "caption": "Form tạo kế hoạch audit"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-030.png",
+          "alt": "popup chọn store để thêm vào kế hoạch",
+          "caption": "popup chọn store để thêm vào kế hoạch"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-031.png",
+          "alt": "Kế hoạch nháp sẵn sàng phát hành",
+          "caption": "Kế hoạch nháp sẵn sàng phát hành"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-032.png",
+          "alt": "Xác nhận phát hành kế hoạch",
+          "caption": "Xác nhận phát hành kế hoạch"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-033.png",
+          "alt": "Kế hoạch sau khi phát hành",
+          "caption": "Kế hoạch sau khi phát hành"
+        }
+      ]
+    },
+    {
+      "id": "7-4-sao-chep-va-phat-hanh-ke-hoach-audit",
+      "title": "7.4. Sao Chép Và Phát Hành Kế Hoạch Audit",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở kế hoạch audit cần sao chép.",
+            "Chọn thao tác sao chép nếu có.",
+            "Kiểm tra lại tên kế hoạch, kỳ audit, checklist và danh sách cửa hàng.",
+            "Cập nhật phân công QC nếu cần.",
+            "Phát hành kế hoạch khi dữ liệu đã đúng."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-034.png",
+          "alt": "Form sao chép kế hoạch audit",
+          "caption": "Form sao chép kế hoạch audit"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-035.png",
+          "alt": "Kế hoạch audit được sao chép",
+          "caption": "Kế hoạch audit được sao chép"
+        }
+      ]
+    },
+    {
+      "id": "8-tieu-chi-va-checklist",
+      "title": "8. Tiêu Chí Và Checklist",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QA Manager dùng nhóm màn hình này để cấu hình tiêu chí, checklist và phiên bản checklist trước khi tạo kế hoạch audit."
+        }
+      ]
+    },
+    {
+      "id": "8-1-quan-ly-tieu-chi",
+      "title": "8.1. Quản Lý Tiêu Chí",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tạo tiêu chí thường"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Tiêu chí.",
+            "Xem danh sách tiêu chí hiện có.",
+            "Chọn Thêm tiêu chí mới nếu cần tạo mới.",
+            "Nhập mã tiêu chí.",
+            "Nhập tên tiêu chí.",
+            "Chọn nhóm tiêu chí.",
+            "Nhập mô tả/diễn giải lỗi.",
+            "Chọn loại tiêu chí Thường.",
+            "Cấu hình điểm hoặc thông tin liên quan theo cơ chế điểm của checklist.",
+            "Chọn loại cửa hàng áp dụng và phạm vi áp dụng.",
+            "Lưu khi dữ liệu đúng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tạo tiêu chí RISK"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Thêm tiêu chí mới.",
+            "Nhập mã và tên tiêu chí.",
+            "Chọn loại tiêu chí Risk.",
+            "Nhập mô tả tình huống RISK để QC nhận diện đúng ngoài hiện trường.",
+            "Chọn loại cửa hàng áp dụng.",
+            "Lưu khi dữ liệu đúng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tạo tiêu chí CCP nhóm"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Thêm tiêu chí mới.",
+            "Nhập mã và tên tiêu chí.",
+            "Chọn loại tiêu chí CCP nhóm hoặc loại CCP tương ứng trên form.",
+            "Gắn tiêu chí vào nhóm liên quan.",
+            "Nhập mô tả lý do CCP.",
+            "Chọn loại cửa hàng áp dụng.",
+            "Lưu khi dữ liệu đúng."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "QA Manager xem được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Chỉ số tổng quan",
+              "Tổng tiêu chí, số đang hoạt động, số RISK, CCP nhóm, nhóm tiêu chí"
+            ],
+            [
+              "Danh sách tiêu chí",
+              "Mã, tên, nhóm, loại cửa hàng, loại tiêu chí, trạng thái"
+            ],
+            [
+              "Form tiêu chí",
+              "Mã, tên, mô tả, nhóm, điểm, loại tiêu chí, phạm vi"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-036.png",
+          "alt": "Danh sách tiêu chí",
+          "caption": "Danh sách tiêu chí"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-037.png",
+          "alt": "Form tạo tiêu chí",
+          "caption": "Form tạo tiêu chí"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-038.png",
+          "alt": "Form tạo tiêu chí khi chọn loại Risk",
+          "caption": "Form tạo tiêu chí khi chọn loại Risk"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-039.png",
+          "alt": "Form tạo tiêu chí khi chọn loại CCP nhóm",
+          "caption": "Form tạo tiêu chí khi chọn loại CCP nhóm"
+        }
+      ]
+    },
+    {
+      "id": "8-2-quan-ly-checklist",
+      "title": "8.2. Quản Lý Checklist",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tạo checklist"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Checklist.",
+            "Xem danh sách checklist.",
+            "Chọn Tạo checklist mới.",
+            "Nhập Family code.",
+            "Kiểm tra Phiên bản.",
+            "Nhập Tên checklist.",
+            "Nhập mô tả nếu cần.",
+            "Chọn phạm vi/loại cửa hàng áp dụng.",
+            "Cấu hình cơ chế điểm của checklist.",
+            "Tạo các section/nhóm hiển thị trong checklist.",
+            "Với mỗi section, mở modal chọn danh sách tiêu chí.",
+            "Tick các tiêu chí cần đưa vào section.",
+            "Xác nhận để thêm tiêu chí vào section.",
+            "Nếu checklist dùng trọng số, nhập trọng số cho từng nhóm/section.",
+            "Kiểm tra tổng trọng số bằng 100%.",
+            "Lưu nháp hoặc phát hành checklist theo quy trình."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Mở checklist để kiểm tra"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại danh sách checklist, mở checklist cần xem.",
+            "Kiểm tra tên, phiên bản, trạng thái và phạm vi áp dụng.",
+            "Kiểm tra các section.",
+            "Kiểm tra tiêu chí nằm trong từng section.",
+            "Kiểm tra tổng trọng số nếu checklist có tính điểm theo trọng số."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lưu ý checklist nội bộ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Maycha, Tam Hảo và Cloud nội bộ dùng chung một cấu trúc checklist nội bộ.",
+            "Tên brand trong checklist nên dùng wording động theo brand, tránh tách checklist chỉ vì khác chữ brand.",
+            "Tổng tỷ trọng nhóm tiêu chí phải bằng 100%."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-040.png",
+          "alt": "Danh sách checklist",
+          "caption": "Danh sách checklist"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-041.png",
+          "alt": "Chi tiết checklist",
+          "caption": "Chi tiết checklist"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-042.png",
+          "alt": "Chi tiết checklist nháp có cấu hình section và trọng số",
+          "caption": "Chi tiết checklist nháp có cấu hình section và trọng số"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-043.png",
+          "alt": "Modal chọn danh sách tiêu chí cho section",
+          "caption": "Modal chọn danh sách tiêu chí cho section"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-044.png",
+          "alt": "Tiêu chí đã được chọn trong modal",
+          "caption": "Tiêu chí đã được chọn trong modal"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-045.png",
+          "alt": "Tiêu chí đã được đưa vào section",
+          "caption": "Tiêu chí đã được đưa vào section"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-046.png",
+          "alt": "Checklist sau khi lưu thay đổi",
+          "caption": "Checklist sau khi lưu thay đổi"
+        }
+      ]
+    },
+    {
+      "id": "8-3-tao-phien-ban-moi-tu-checklist-co-san",
+      "title": "8.3. Tạo Phiên Bản Mới Từ Checklist Có Sẵn",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở checklist cần tạo phiên bản mới.",
+            "Chọn Tạo phiên bản mới.",
+            "Kiểm tra thông tin phiên bản mới.",
+            "Cập nhật tên checklist nếu cần phân biệt dễ hơn.",
+            "Lưu hoặc phát hành theo quy trình."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-047.png",
+          "alt": "Form tạo phiên bản checklist mới",
+          "caption": "Form tạo phiên bản checklist mới"
+        }
+      ]
+    },
+    {
+      "id": "9-bao-cao",
+      "title": "9. Báo Cáo",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Báo cáo giúp theo dõi chất lượng QA/QC theo cửa hàng, thương hiệu, AM, loại cửa hàng và kỳ dữ liệu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nội dung dashboard/báo cáo cần thể hiện"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Nhóm thông tin",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Điểm tổng kết",
+              "Điểm bài chấm theo cửa hàng và theo phạm vi quản lý"
+            ],
+            [
+              "Điểm trung bình",
+              "Điểm trung bình theo tháng/quý hoặc kỳ được chọn"
+            ],
+            [
+              "Tổng lỗi",
+              "Tổng số lỗi phát sinh trong kỳ"
+            ],
+            [
+              "RISK/CCP",
+              "Số trường hợp nghiêm trọng cần chú ý"
+            ],
+            [
+              "Lỗi lặp lại",
+              "Tổng lỗi lặp trong kỳ"
+            ],
+            [
+              "Phân tích vi phạm",
+              "Lỗi theo nhóm, điểm trừ, tỷ lệ lỗi"
+            ],
+            [
+              "Cửa hàng cần chú ý",
+              "Cửa hàng có nhiều lỗi hoặc nhiều lỗi lặp"
+            ],
+            [
+              "Tiêu chí lỗi nổi bật",
+              "Tiêu chí bị đánh lỗi nhiều nhất"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Bản này chỉ hướng dẫn xem báo cáo trên màn hình."
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "id": "10-thong-bao",
+      "title": "10. Thông Báo",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thông báo giúp người dùng biết khi có kế hoạch audit mới, kết quả mới hoặc cập nhật liên quan đến Action Plan."
+        },
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn biểu tượng chuông ở góc phải trên cùng.",
+            "Xem danh sách thông báo.",
+            "Chọn Đọc tất cả nếu muốn đánh dấu đã đọc.",
+            "Chọn dấu đóng ở từng thông báo nếu muốn ẩn thông báo đó."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-048.png",
+          "alt": "Popup thông báo",
+          "caption": "Popup thông báo"
+        }
+      ]
+    },
+    {
+      "id": "11-quan-tri-he-thong",
+      "title": "11. Quản Trị Hệ Thống",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Admin dùng nhóm màn hình quản trị để quản lý master data và người dùng."
+        }
+      ]
+    },
+    {
+      "id": "11-1-quan-ly-thuong-hieu",
+      "title": "11.1. Quản Lý Thương Hiệu",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Thương hiệu.",
+            "Xem danh sách thương hiệu.",
+            "Tạo mới hoặc chỉnh sửa thương hiệu nếu cần.",
+            "Kiểm tra mã, tên, trạng thái và thông tin liên quan."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-049.png",
+          "alt": "Danh sách thương hiệu",
+          "caption": "Danh sách thương hiệu"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-050.png",
+          "alt": "Form tạo thương hiệu",
+          "caption": "Form tạo thương hiệu"
+        }
+      ]
+    },
+    {
+      "id": "11-2-quan-ly-cua-hang",
+      "title": "11.2. Quản Lý Cửa Hàng",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Cửa hàng.",
+            "Xem danh sách cửa hàng.",
+            "Tạo mới hoặc chỉnh sửa cửa hàng nếu cần.",
+            "Cấu hình mã cửa hàng, tên, email Store Manager, thương hiệu, AM, loại cửa hàng, địa chỉ và trạng thái."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-051.png",
+          "alt": "Danh sách cửa hàng",
+          "caption": "Danh sách cửa hàng"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-052.png",
+          "alt": "Form tạo cửa hàng",
+          "caption": "Form tạo cửa hàng"
+        }
+      ]
+    },
+    {
+      "id": "11-3-quan-ly-ia-ban",
+      "title": "11.3. Quản Lý Địa Bàn",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Địa bàn.",
+            "Xem danh sách tỉnh/thành, quận/huyện, phường/xã.",
+            "Tạo mới hoặc chỉnh sửa địa bàn nếu cần."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-053.png",
+          "alt": "Danh sách địa bàn",
+          "caption": "Danh sách địa bàn"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-054.png",
+          "alt": "Form tạo địa bàn",
+          "caption": "Form tạo địa bàn"
+        }
+      ]
+    },
+    {
+      "id": "11-4-quan-ly-nguoi-dung-va-phan-quyen",
+      "title": "11.4. Quản Lý Người Dùng Và Phân Quyền",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn Người dùng.",
+            "Xem danh sách tài khoản.",
+            "Tạo mới hoặc chỉnh sửa người dùng nếu cần.",
+            "Cấu hình thông tin tài khoản, vai trò và phạm vi dữ liệu."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Admin xem và cấu hình được"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Khu vực",
+            "Nội dung"
+          ],
+          "rows": [
+            [
+              "Tổng quan",
+              "Tổng user, tài khoản hoạt động, đang khóa, chờ đổi mật khẩu"
+            ],
+            [
+              "Danh sách",
+              "Tên/email, bộ phận, role và trạng thái"
+            ],
+            [
+              "Form người dùng",
+              "Thông tin tài khoản và phần vai trò/phạm vi phân quyền"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-055.png",
+          "alt": "Danh sách người dùng",
+          "caption": "Danh sách người dùng"
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/figure-056.png",
+          "alt": "Form tạo người dùng",
+          "caption": "Form tạo người dùng"
+        }
+      ]
+    },
+    {
+      "id": "12-cau-hoi-thuong-gap-faq",
+      "title": "12. Câu Hỏi Thường Gặp (FAQ)",
+      "level": 1,
+      "blocks": []
+    },
+    {
+      "id": "12-1-tai-lieu-nay-huong-dan-cho-loai-cua-hang-nao",
+      "title": "12.1. Tài liệu này hướng dẫn cho loại cửa hàng nào?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tài liệu hướng dẫn luồng vận hành cho cửa hàng quản lý/nội bộ. Phần cửa hàng nhượng quyền/Franchise đang phát triển và chưa nằm trong phạm vi thao tác của tài liệu này."
+        }
+      ]
+    },
+    {
+      "id": "12-2-qc-xem-va-thuc-hien-bai-audit-o-au",
+      "title": "12.2. QC xem và thực hiện bài audit ở đâu?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QC vào mục Thực hiện audit để xem các bài được phân công. Với thao tác tại cửa hàng, QC thực hiện audit trên giao diện mobile."
+        }
+      ]
+    },
+    {
+      "id": "12-3-qc-co-the-luu-bai-ang-cham-e-tiep-tuc-sau-khong",
+      "title": "12.3. QC có thể lưu bài đang chấm để tiếp tục sau không?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Có. QC chọn Lưu nháp trong quá trình chấm và quay lại bài audit để tiếp tục trước khi chọn Hoàn tất audit."
+        }
+      ]
+    },
+    {
+      "id": "12-4-khi-nao-can-them-anh-minh-chung",
+      "title": "12.4. Khi nào cần thêm ảnh minh chứng?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Với lỗi thường, ảnh minh chứng là tùy chọn theo tình huống ghi nhận. Với RISK và CCP nhóm, QC cần nhập ghi chú và gắn ảnh minh chứng trước khi áp dụng."
+        }
+      ]
+    },
+    {
+      "id": "12-5-risk-va-ccp-nhom-anh-huong-iem-nhu-the-nao",
+      "title": "12.5. RISK và CCP nhóm ảnh hưởng điểm như thế nào?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trong checklist nội bộ, RISK làm điểm toàn bài audit về 0. CCP nhóm làm mất toàn bộ điểm của nhóm tiêu chí liên quan; thông tin lỗi vẫn được lưu để theo dõi."
+        }
+      ]
+    },
+    {
+      "id": "12-6-ai-tao-ke-hoach-va-phan-cong-qc",
+      "title": "12.6. Ai tạo kế hoạch và phân công QC?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "QA Manager tạo Kế hoạch audit, thêm cửa hàng và chọn QC Audit phụ trách từng cửa hàng trước khi phát hành kế hoạch."
+        }
+      ]
+    },
+    {
+      "id": "12-7-neu-phat-sinh-cua-hang-moi-sau-khi-ke-hoach-a-phat-hanh-thi-xu-ly-t",
+      "title": "12.7. Nếu phát sinh cửa hàng mới sau khi kế hoạch đã phát hành thì xử lý thế nào?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Theo luồng vận hành hiện tại, QA Manager tạo kế hoạch bổ sung cho cửa hàng phát sinh để không ảnh hưởng các assignment đã triển khai trong kế hoạch trước."
+        }
+      ]
+    },
+    {
+      "id": "12-8-khi-nao-action-plan-uoc-tao-va-ai-cap-nhat",
+      "title": "12.8. Khi nào Action Plan được tạo và ai cập nhật?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sau khi kết quả audit được xác nhận điểm, hệ thống cho phép tạo Action Plan nếu có nội dung cần khắc phục. Store Manager quản lý nội dung khắc phục và minh chứng của cửa hàng; QA Manager và AM theo dõi tiến độ theo phạm vi được phân quyền."
+        }
+      ]
+    },
+    {
+      "id": "12-9-checklist-co-trong-so-can-luu-y-gi",
+      "title": "12.9. Checklist có trọng số cần lưu ý gì?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Khi checklist dùng cơ chế trọng số, QA Manager cấu hình tỷ trọng các nhóm tiêu chí sao cho tổng tỷ trọng bằng 100% trước khi phát hành."
+        }
+      ]
+    },
+    {
+      "id": "12-10-nguoi-dung-xem-thong-bao-moi-o-au",
+      "title": "12.10. Người dùng xem thông báo mới ở đâu?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Người dùng chọn biểu tượng chuông ở góc phải trên cùng để xem các thông báo mới liên quan đến kế hoạch audit hoặc nội dung được hệ thống gửi đến tài khoản."
+        }
+      ]
+    }
+  ]
+}
