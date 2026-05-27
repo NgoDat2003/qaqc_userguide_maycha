@@ -3,6 +3,9 @@ dist
 .tmp
 *.tsbuildinfo
 preview-*.png
+public/assets/user-guide/confirm-score-action-plan.png
+public/assets/user-guide/dashboard-qc.png
+public/assets/user-guide/dashboard-sm.png
 vite.config.js
 vite.config.d.ts
 .env*

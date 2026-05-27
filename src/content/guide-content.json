@@ -5,7 +5,7 @@
   "audience": "Admin, QA Manager, QC Audit, AM, Store Manager",
   "notice": "Tài liệu này tập trung hướng dẫn thao tác chính cho cửa hàng quản lý/nội bộ trong phạm vi UAT hiện tại.",
   "sourceDocument": "/downloads/huong-dan-su-dung-he-thong-qaqc-uat-27-05-2026.docx",
-  "imageCount": 54,
+  "imageCount": 57,
   "sections": [
     {
       "id": "overview",
@@ -254,8 +254,10 @@
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Cần bổ sung ảnh Dashboard QC theo giao diện UAT mới."
+          "type": "image",
+          "src": "/assets/user-guide/figure-005.png",
+          "alt": "Dashboard QC",
+          "caption": "Dashboard QC"
         }
       ]
     },
@@ -283,8 +285,10 @@
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Cần bổ sung ảnh Dashboard Store Manager theo giao diện UAT mới."
+          "type": "image",
+          "src": "/assets/user-guide/figure-006.png",
+          "alt": "Dashboard Store Manager",
+          "caption": "Dashboard Store Manager"
         }
       ]
     },
@@ -372,7 +376,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-005.png",
+          "src": "/assets/user-guide/figure-007.png",
           "alt": "Danh sách bài audit được phân công",
           "caption": "Danh sách bài audit được phân công"
         }
@@ -428,13 +432,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-006.png",
+          "src": "/assets/user-guide/figure-008.png",
           "alt": "Bài audit sau khi bắt đầu",
           "caption": "Bài audit sau khi bắt đầu"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-007.png",
+          "src": "/assets/user-guide/figure-009.png",
           "alt": "Section tiêu chí được mở",
           "caption": "Section tiêu chí được mở"
         }
@@ -487,13 +491,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-008.png",
+          "src": "/assets/user-guide/figure-010.png",
           "alt": "Popup đánh giá tiêu chí thường",
           "caption": "Popup đánh giá tiêu chí thường"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-009.png",
+          "src": "/assets/user-guide/figure-011.png",
           "alt": "Đánh dấu tiêu chí vi phạm",
           "caption": "Đánh dấu tiêu chí vi phạm"
         }
@@ -519,7 +523,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-010.png",
+          "src": "/assets/user-guide/figure-012.png",
           "alt": "Quản lý ảnh minh chứng",
           "caption": "Quản lý ảnh minh chứng"
         }
@@ -562,13 +566,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-011.png",
+          "src": "/assets/user-guide/figure-013.png",
           "alt": "Danh sách lý do RISK",
           "caption": "Danh sách lý do RISK"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-012.png",
+          "src": "/assets/user-guide/figure-014.png",
           "alt": "Chi tiết RISK có trường ghi chú và ảnh",
           "caption": "Chi tiết RISK có trường ghi chú và ảnh"
         }
@@ -612,13 +616,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-013.png",
+          "src": "/assets/user-guide/figure-015.png",
           "alt": "Danh sách nhóm CCP",
           "caption": "Danh sách nhóm CCP"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-014.png",
+          "src": "/assets/user-guide/figure-016.png",
           "alt": "Chi tiết lý do CCP nhóm",
           "caption": "Chi tiết lý do CCP nhóm"
         }
@@ -676,13 +680,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-015.png",
+          "src": "/assets/user-guide/figure-017.png",
           "alt": "QC xem danh sách kết quả audit",
           "caption": "QC xem danh sách kết quả audit"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-016.png",
+          "src": "/assets/user-guide/figure-018.png",
           "alt": "QC xem chi tiết kết quả audit",
           "caption": "QC xem chi tiết kết quả audit"
         }
@@ -744,7 +748,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-017.png",
+          "src": "/assets/user-guide/figure-019.png",
           "alt": "QA Manager - danh sách kết quả audit",
           "caption": "QA Manager - danh sách kết quả audit"
         }
@@ -799,7 +803,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-018.png",
+          "src": "/assets/user-guide/figure-020.png",
           "alt": "QA Manager - chi tiết kết quả audit",
           "caption": "QA Manager - chi tiết kết quả audit"
         }
@@ -838,13 +842,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-019.png",
+          "src": "/assets/user-guide/figure-021.png",
           "alt": "QA Manager - chế độ chỉnh sửa kết quả",
           "caption": "QA Manager - chế độ chỉnh sửa kết quả"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-020.png",
+          "src": "/assets/user-guide/figure-022.png",
           "alt": "QA Manager - popup lý do chỉnh sửa",
           "caption": "QA Manager - popup lý do chỉnh sửa"
         }
@@ -898,8 +902,10 @@
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Cần bổ sung ảnh popup Xác nhận điểm audit và màn Action Plan tự sinh sau xác nhận."
+          "type": "image",
+          "src": "/assets/user-guide/figure-023.png",
+          "alt": "Popup xác nhận điểm audit và tự sinh Action Plan",
+          "caption": "Popup xác nhận điểm audit và tự sinh Action Plan"
         }
       ]
     },
@@ -943,13 +949,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-021.png",
+          "src": "/assets/user-guide/figure-024.png",
           "alt": "QA Manager - danh sách Action Plan",
           "caption": "QA Manager - danh sách Action Plan"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-022.png",
+          "src": "/assets/user-guide/figure-025.png",
           "alt": "QA Manager - chi tiết Action Plan",
           "caption": "QA Manager - chi tiết Action Plan"
         }
@@ -975,13 +981,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-023.png",
+          "src": "/assets/user-guide/figure-026.png",
           "alt": "AM - danh sách Action Plan",
           "caption": "AM - danh sách Action Plan"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-024.png",
+          "src": "/assets/user-guide/figure-027.png",
           "alt": "AM - chi tiết Action Plan",
           "caption": "AM - chi tiết Action Plan"
         }
@@ -1036,13 +1042,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-025.png",
+          "src": "/assets/user-guide/figure-028.png",
           "alt": "Store Manager - danh sách Action Plan có dữ liệu",
           "caption": "Store Manager - danh sách Action Plan có dữ liệu"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-026.png",
+          "src": "/assets/user-guide/figure-029.png",
           "alt": "Store Manager - chi tiết Action Plan",
           "caption": "Store Manager - chi tiết Action Plan"
         }
@@ -1112,7 +1118,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-027.png",
+          "src": "/assets/user-guide/figure-030.png",
           "alt": "Danh sách kế hoạch audit",
           "caption": "Danh sách kế hoạch audit"
         }
@@ -1138,7 +1144,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-028.png",
+          "src": "/assets/user-guide/figure-031.png",
           "alt": "Chi tiết kế hoạch audit",
           "caption": "Chi tiết kế hoạch audit"
         }
@@ -1172,31 +1178,31 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-029.png",
+          "src": "/assets/user-guide/figure-032.png",
           "alt": "Form tạo kế hoạch audit",
           "caption": "Form tạo kế hoạch audit"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-030.png",
+          "src": "/assets/user-guide/figure-033.png",
           "alt": "popup chọn store để thêm vào kế hoạch",
           "caption": "popup chọn store để thêm vào kế hoạch"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-031.png",
+          "src": "/assets/user-guide/figure-034.png",
           "alt": "Kế hoạch nháp sẵn sàng phát hành",
           "caption": "Kế hoạch nháp sẵn sàng phát hành"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-032.png",
+          "src": "/assets/user-guide/figure-035.png",
           "alt": "Xác nhận phát hành kế hoạch",
           "caption": "Xác nhận phát hành kế hoạch"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-033.png",
+          "src": "/assets/user-guide/figure-036.png",
           "alt": "Kế hoạch sau khi phát hành",
           "caption": "Kế hoạch sau khi phát hành"
         }
@@ -1350,25 +1356,25 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-034.png",
+          "src": "/assets/user-guide/figure-037.png",
           "alt": "Danh sách tiêu chí",
           "caption": "Danh sách tiêu chí"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-035.png",
+          "src": "/assets/user-guide/figure-038.png",
           "alt": "Form tạo tiêu chí",
           "caption": "Form tạo tiêu chí"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-036.png",
+          "src": "/assets/user-guide/figure-039.png",
           "alt": "Form tạo tiêu chí khi chọn loại Risk",
           "caption": "Form tạo tiêu chí khi chọn loại Risk"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-037.png",
+          "src": "/assets/user-guide/figure-040.png",
           "alt": "Form tạo tiêu chí khi chọn loại CCP nhóm",
           "caption": "Form tạo tiêu chí khi chọn loại CCP nhóm"
         }
@@ -1433,43 +1439,43 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-038.png",
+          "src": "/assets/user-guide/figure-041.png",
           "alt": "Danh sách checklist",
           "caption": "Danh sách checklist"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-039.png",
+          "src": "/assets/user-guide/figure-042.png",
           "alt": "Chi tiết checklist",
           "caption": "Chi tiết checklist"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-040.png",
+          "src": "/assets/user-guide/figure-043.png",
           "alt": "Chi tiết checklist nháp có cấu hình section và trọng số",
           "caption": "Chi tiết checklist nháp có cấu hình section và trọng số"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-041.png",
+          "src": "/assets/user-guide/figure-044.png",
           "alt": "Modal chọn danh sách tiêu chí cho section",
           "caption": "Modal chọn danh sách tiêu chí cho section"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-042.png",
+          "src": "/assets/user-guide/figure-045.png",
           "alt": "Tiêu chí đã được chọn trong modal",
           "caption": "Tiêu chí đã được chọn trong modal"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-043.png",
+          "src": "/assets/user-guide/figure-046.png",
           "alt": "Tiêu chí đã được đưa vào section",
           "caption": "Tiêu chí đã được đưa vào section"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-044.png",
+          "src": "/assets/user-guide/figure-047.png",
           "alt": "Checklist sau khi lưu thay đổi",
           "caption": "Checklist sau khi lưu thay đổi"
         }
@@ -1496,7 +1502,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-045.png",
+          "src": "/assets/user-guide/figure-048.png",
           "alt": "Form tạo phiên bản checklist mới",
           "caption": "Form tạo phiên bản checklist mới"
         }
@@ -1589,7 +1595,7 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-046.png",
+          "src": "/assets/user-guide/figure-049.png",
           "alt": "Popup thông báo",
           "caption": "Popup thông báo"
         }
@@ -1626,13 +1632,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-047.png",
+          "src": "/assets/user-guide/figure-050.png",
           "alt": "Danh sách thương hiệu",
           "caption": "Danh sách thương hiệu"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-048.png",
+          "src": "/assets/user-guide/figure-051.png",
           "alt": "Form tạo thương hiệu",
           "caption": "Form tạo thương hiệu"
         }
@@ -1658,13 +1664,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-049.png",
+          "src": "/assets/user-guide/figure-052.png",
           "alt": "Danh sách cửa hàng",
           "caption": "Danh sách cửa hàng"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-050.png",
+          "src": "/assets/user-guide/figure-053.png",
           "alt": "Form tạo cửa hàng",
           "caption": "Form tạo cửa hàng"
         }
@@ -1689,13 +1695,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-051.png",
+          "src": "/assets/user-guide/figure-054.png",
           "alt": "Danh sách địa bàn",
           "caption": "Danh sách địa bàn"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-052.png",
+          "src": "/assets/user-guide/figure-055.png",
           "alt": "Form tạo địa bàn",
           "caption": "Form tạo địa bàn"
         }
@@ -1752,13 +1758,13 @@
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-053.png",
+          "src": "/assets/user-guide/figure-056.png",
           "alt": "Danh sách người dùng",
           "caption": "Danh sách người dùng"
         },
         {
           "type": "image",
-          "src": "/assets/user-guide/figure-054.png",
+          "src": "/assets/user-guide/figure-057.png",
           "alt": "Form tạo người dùng",
           "caption": "Form tạo người dùng"
         }

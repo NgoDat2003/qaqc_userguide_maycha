@@ -111,7 +111,7 @@ def build_content() -> dict:
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
 
-    for old in ASSET_DIR.glob("*"):
+    for old in ASSET_DIR.glob("figure-*"):
         if old.is_file():
             old.unlink()
 
