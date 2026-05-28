@@ -308,13 +308,13 @@
       ]
     },
     {
-      "id": "4-qc-thuc-hien-audit-tren-mobile",
-      "title": "4. QC Thực Hiện Audit Trên Mobile",
+      "id": "4-thuc-hien-audit-tren-mobile",
+      "title": "4. Thực Hiện Audit Trên Mobile",
       "level": 1,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "QC dùng mobile để xem bài được phân công, mở bài audit, đánh dấu lỗi, thêm ghi chú/ảnh và gửi bài."
+          "text": "Tính năng Thực hiện audit trên mobile dùng để xem bài được phân công, mở bài audit, ghi nhận lỗi, thêm ghi chú/ảnh minh chứng, lưu nháp và gửi bài."
         }
       ]
     },
