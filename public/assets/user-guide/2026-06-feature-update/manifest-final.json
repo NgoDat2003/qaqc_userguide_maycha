@@ -1,0 +1,107 @@
+[
+  {
+    "name": "dashboard-qam-verified-overview",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-qam-verified-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qam-filter-dropdown-primary",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-qam-filter-dropdown-primary.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qam-filter-dropdown-store-type",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-qam-filter-dropdown-store-type.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qc-verified-overview",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-qc-verified-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qc-filter-dropdown-primary",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-qc-filter-dropdown-primary.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-verified-overview",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-am-verified-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-filter-dropdown-primary",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-am-filter-dropdown-primary.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-filter-dropdown-store-type",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-am-filter-dropdown-store-type.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-sm-verified-overview",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-sm-verified-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-sm-filter-dropdown-primary",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\dashboard-sm-filter-dropdown-primary.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "audit-results-list-export-excel-verified",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-results-list-export-excel-verified.png",
+    "url": "http://localhost:3000/audit-results",
+    "ok": true
+  },
+  {
+    "name": "audit-result-detail-findings-and-zero-note",
+    "ok": false,
+    "reason": "detail button not found"
+  },
+  {
+    "name": "audit-plans-list-verified",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-plans-list-verified.png",
+    "url": "http://localhost:3000/audit-plans",
+    "ok": true
+  },
+  {
+    "name": "audit-plan-detail-overview",
+    "ok": false,
+    "reason": "open button not found"
+  },
+  {
+    "name": "audit-execution-list-verified",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-execution-list-verified.png",
+    "url": "http://localhost:3000/audit-execution",
+    "ok": true
+  },
+  {
+    "name": "audit-execution-detail-verified",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-execution-detail-verified.png",
+    "url": "http://localhost:3000/audit-execution/6a1e4cf17df3384329289aac/mc-042",
+    "ok": true
+  },
+  {
+    "name": "audit-execution-zero-point-observation",
+    "ok": false,
+    "reason": "zero point action not visible"
+  },
+  {
+    "name": "notifications-score-confirmation-verified",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\notifications-score-confirmation-verified.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "name": "audit-result-detail-findings-and-zero-note",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-result-detail-findings-and-zero-note.png",
+    "url": "http://localhost:3000/audit-results/6a1e4cf27df3384329289c8d",
+    "ok": true
+  },
+  {
+    "name": "audit-plan-detail-overview",
+    "file": "D:\\work\\maycha\\maycha_QAQC_app\\outputs\\qaqc-user-guide-web\\public\\assets\\user-guide\\2026-06-feature-update\\audit-plan-detail-overview.png",
+    "url": "http://localhost:3000/audit-plans/6a1e4cf27df3384329289caf",
+    "ok": true
+  },
+  {
+    "name": "audit-plan-missing-scores-drawer",
+    "ok": false,
+    "reason": "drawer not opened",
+    "buttons": [
+      {
+        "i": 0,
+        "text": ""
+      },
+      {
+        "i": 1,
+        "text": "PQ"
+      },
+      {
+        "i": 2,
+        "text": "Danh sách kế hoạch"
+      },
+      {
+        "i": 3,
+        "text": "Cửa hàng chưa có điểm"
+      },
+      {
+        "i": 4,
+        "text": "Đóng kế hoạch"
+      },
+      {
+        "i": 5,
+        "text": "Thêm store"
+      },
+      {
+        "i": 6,
+        "text": ""
+      },
+      {
+        "i": 7,
+        "text": ""
+      }
+    ]
+  }
+]

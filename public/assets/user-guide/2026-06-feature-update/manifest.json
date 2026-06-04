@@ -1,0 +1,89 @@
+[
+  {
+    "name": "dashboard-qam-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qam-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qam-multi-select-dropdown",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qam-multi-select-dropdown.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qc-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qc-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qc-multi-select-dropdown",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qc-multi-select-dropdown.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-sm-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-sm-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-sm-multi-select-dropdown",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-sm-multi-select-dropdown.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-am-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-multi-select-dropdown",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-am-multi-select-dropdown.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "audit-results-list-export-excel",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-results-list-export-excel.png",
+    "url": "http://localhost:3000/audit-results",
+    "ok": true
+  },
+  {
+    "name": "audit-result-detail-zero-point-and-confirmation",
+    "ok": false,
+    "reason": "No audit result detail link found"
+  },
+  {
+    "name": "audit-plans-list",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-plans-list.png",
+    "url": "http://localhost:3000/audit-plans",
+    "ok": true
+  },
+  {
+    "name": "audit-plan-detail",
+    "ok": false,
+    "reason": "No audit plan detail link found"
+  },
+  {
+    "name": "audit-execution-assigned-list",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-execution-assigned-list.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "audit-execution-checklist",
+    "ok": false,
+    "reason": "No audit execution detail link found"
+  },
+  {
+    "name": "notifications-score-confirmation",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/notifications-score-confirmation.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  }
+]

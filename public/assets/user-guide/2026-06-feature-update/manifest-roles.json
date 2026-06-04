@@ -1,0 +1,66 @@
+[
+  {
+    "name": "dashboard-qam-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qam-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-qc-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-qc-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-am-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-am-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "dashboard-sm-overview",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/dashboard-sm-overview.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  },
+  {
+    "name": "audit-results-list-export-excel",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-results-list-export-excel.png",
+    "url": "http://localhost:3000/audit-results",
+    "ok": true
+  },
+  {
+    "name": "audit-result-detail-zero-point-and-confirmation",
+    "ok": false,
+    "reason": "No detail button found"
+  },
+  {
+    "name": "audit-plans-list",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-plans-list.png",
+    "url": "http://localhost:3000/audit-plans",
+    "ok": true
+  },
+  {
+    "name": "audit-plan-detail",
+    "ok": false,
+    "reason": "No plan detail button found"
+  },
+  {
+    "name": "audit-execution-assigned-list",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-execution-assigned-list.png",
+    "url": "http://localhost:3000/audit-execution",
+    "ok": true
+  },
+  {
+    "name": "audit-execution-checklist",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/audit-execution-checklist.png",
+    "url": "http://localhost:3000/audit-execution/6a1e4cf17df3384329289aac/mc-042",
+    "ok": true
+  },
+  {
+    "name": "notifications-score-confirmation",
+    "file": "D:/work/maycha/maycha_QAQC_app/outputs/qaqc-user-guide-web/public/assets/user-guide/2026-06-feature-update/notifications-score-confirmation.png",
+    "url": "http://localhost:3000/dashboard",
+    "ok": true
+  }
+]

@@ -7,7 +7,8 @@
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 4173",
-    "extract:guide": "python scripts/extract-docx-guide.py"
+    "extract:guide": "python scripts/extract-docx-guide.py",
+    "build:word": "python scripts/build-word-guide.py"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
