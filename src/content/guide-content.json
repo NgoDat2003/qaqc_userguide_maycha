@@ -1243,78 +1243,8 @@
       ]
     },
     {
-      "id": "audit-plan-bu-diem",
-      "title": "6.5. Bù điểm cửa hàng chưa được chấm",
-      "level": 2,
-      "blocks": [
-        {
-          "type": "label",
-          "text": "Mục đích"
-        },
-        {
-          "type": "paragraph",
-          "text": "Cuối kỳ, QA có thể nhập điểm bù cho các cửa hàng chưa được QC chấm để dữ liệu thống kê của kỳ hiện tại đầy đủ hơn. Chức năng này chỉ dùng cho kế hoạch ở trạng thái Đang mở."
-        },
-        {
-          "type": "label",
-          "text": "Cách thao tác"
-        },
-        {
-          "type": "steps",
-          "items": [
-            "Mở kế hoạch đang ở trạng thái Đang mở.",
-            "Bấm Cửa hàng chưa có điểm.",
-            "Xem điểm gần nhất, checklist, ngày submit và người chấm gần nhất để tham khảo.",
-            "Nhập điểm bù thủ công cho từng cửa hàng hoặc bấm Sao chép tất cả điểm trống để điền điểm gần nhất vào các dòng chưa nhập.",
-            "Kiểm tra lại điểm rồi bấm Cập nhật điểm bù.",
-            "Sau khi cập nhật thành công, làm mới danh sách và kiểm tra trạng thái cửa hàng chuyển thành Đã bù điểm."
-          ]
-        },
-        {
-          "type": "label",
-          "text": "Quy tắc quan trọng"
-        },
-        {
-          "type": "bullets",
-          "items": [
-            "Chỉ cửa hàng chưa được chấm mới xuất hiện; cửa hàng đang chấm, đã hoàn thành hoặc đã bù điểm không xuất hiện.",
-            "Nút Sao chép tất cả điểm trống chỉ điền các dòng chưa có giá trị, không ghi đè điểm QA đã nhập.",
-            "Khi cập nhật, hệ thống chỉ gửi các dòng có điểm; dòng để trống không bị thay đổi.",
-            "Điểm 0 là giá trị hợp lệ. Điểm được kiểm tra theo thang điểm của checklist, không mặc định giới hạn 0-100.",
-            "Điểm bù không có chi tiết lỗi và không tạo Action Plan.",
-            "Bài được bù điểm ghi nhận QA thực hiện là người chấm để thống kê QC không bị sai.",
-            "Nếu dữ liệu thay đổi trong lúc nhập và một cửa hàng không còn đủ điều kiện, hệ thống báo lỗi; bấm Làm mới để tải lại danh sách hợp lệ."
-          ]
-        },
-        {
-          "type": "image",
-          "src": "/assets/user-guide/2026-06-audit-plan-guide/10-missing-scores-drawer.png",
-          "alt": "Cửa hàng chưa có điểm",
-          "caption": "Danh sách cửa hàng chưa có điểm và điểm audit gần nhất để tham khảo."
-        },
-        {
-          "type": "image",
-          "src": "/assets/user-guide/2026-06-audit-plan-guide/11-missing-scores-copy-ready.png",
-          "alt": "Điểm bù đã được sao chép",
-          "caption": "Các dòng chưa nhập được điền từ điểm gần nhất trước khi cập nhật."
-        },
-        {
-          "type": "image",
-          "src": "/assets/user-guide/2026-06-audit-plan-guide/12-missing-scores-after-update.png",
-          "alt": "Danh sách sau khi cập nhật điểm bù",
-          "caption": "Danh sách không còn cửa hàng đủ điều kiện sau khi cập nhật điểm bù thành công."
-        },
-        {
-          "type": "image",
-          "src": "/assets/user-guide/2026-06-audit-plan-guide/13-audit-plan-backfilled-status.png",
-          "alt": "Trạng thái đã bù điểm",
-          "caption": "Cửa hàng chuyển sang trạng thái Đã bù điểm sau khi cập nhật thành công."
-        }
-      ]
-    },
-    {
       "id": "audit-plan-close",
-      "title": "6.6. Đóng kế hoạch",
+      "title": "6.5. Đóng kế hoạch",
       "level": 2,
       "blocks": [
         {
