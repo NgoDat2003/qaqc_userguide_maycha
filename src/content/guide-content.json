@@ -30,12 +30,12 @@
               "Dashboard, Thương hiệu, Cửa hàng, Địa bàn, Người dùng"
             ],
             [
-              "QA",
+              "QA Manager",
               "Điều phối QA/QC, quản lý checklist, audit plan, kết quả và Action Plan",
               "Dashboard, Tiêu chí, Checklist, Kế hoạch audit, Kết quả audit, Action Plan"
             ],
             [
-              "QC",
+              "QC audit",
               "Nhận bài audit và thực hiện chấm điểm",
               "Dashboard QC, Thực hiện audit, Kết quả audit"
             ],
