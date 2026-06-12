@@ -25,8 +25,8 @@ const sections = [
     p('Tài liệu này là bản hướng dẫn web đầy đủ cho hệ thống QA/QC Maycha. Nội dung kế thừa bản guide cũ và bổ sung các flow mới: dashboard 5 role, filter chọn nhiều, export Excel, audit 0 điểm, tự động xác nhận sau 48 giờ và bù điểm cho cửa hàng chưa được chấm.'),
     table(['Vai trò', 'Mục tiêu chính', 'Màn hình thường dùng'], [
       ['Admin / Executive / Company Admin', 'Quản trị dữ liệu nền và xem dashboard điều hành', 'Dashboard, Thương hiệu, Cửa hàng, Địa bàn, Người dùng'],
-      ['QA', 'Điều phối QA/QC, quản lý checklist, audit plan, kết quả và Action Plan', 'Dashboard, Tiêu chí, Checklist, Kế hoạch audit, Kết quả audit, Action Plan'],
-      ['QC', 'Nhận bài audit và thực hiện chấm điểm', 'Dashboard QC, Thực hiện audit, Kết quả audit'],
+      ['QA Manager', 'Điều phối QA/QC, quản lý checklist, audit plan, kết quả và Action Plan', 'Dashboard, Tiêu chí, Checklist, Kế hoạch audit, Kết quả audit, Action Plan'],
+      ['QC audit', 'Nhận bài audit và thực hiện chấm điểm', 'Dashboard QC, Thực hiện audit, Kết quả audit'],
       ['SM', 'Theo dõi cửa hàng, xác nhận điểm và xử lý Action Plan', 'Dashboard SM, Kết quả audit, Action Plan, Thông báo'],
       ['AM', 'Theo dõi các cửa hàng mình phụ trách', 'Dashboard AM, Kết quả audit, Action Plan'],
     ]),
