@@ -40,12 +40,12 @@
               "Dashboard QC, Thực hiện audit, Kết quả audit"
             ],
             [
-              "SM",
+              "Store Manager",
               "Theo dõi cửa hàng, xác nhận điểm và xử lý Action Plan",
               "Dashboard SM, Kết quả audit, Action Plan, Thông báo"
             ],
             [
-              "AM",
+              "Area Manager",
               "Theo dõi các cửa hàng mình phụ trách",
               "Dashboard AM, Kết quả audit, Action Plan"
             ]
