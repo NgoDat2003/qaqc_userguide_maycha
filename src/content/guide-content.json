@@ -2406,7 +2406,7 @@
             "SM nhận thông báo nhắc xác nhận điểm.",
             "SM mở kết quả audit và kiểm tra điểm, lỗi, ghi chú, ảnh minh chứng.",
             "SM xác nhận điểm nếu kết quả đúng.",
-            "Nếu quá 120 giờ SM chưa xác nhận, hệ thống tự xác nhận bằng actor system:auto-confirm-120h."
+            "Nếu quá 120 giờ SM chưa xác nhận, hệ thống tự xác nhận bằng hệ thống tự xác nhận sau 120 giờ."
           ]
         },
         {
@@ -2581,48 +2581,48 @@
             "Ai thường nhận",
             "Màn được mở khi bấm vào"
           ],
-          "rows": [
-            [
-              "audit-plan-published",
-              "QC/AM/SM trong phạm vi kế hoạch",
-              "Kế hoạch audit hoặc Thực hiện audit."
-            ],
-            [
-              "audit-session-submitted",
-              "QA và SM liên quan",
-              "Kết quả audit, có thể focus đúng session."
-            ],
-            [
-              "audit-score-confirmation-reminder",
-              "SM",
-              "Kết quả audit cần xác nhận điểm."
-            ],
-            [
-              "audit-score-auto-confirmed",
-              "SM",
-              "Kết quả audit đã được hệ thống xác nhận sau 120 giờ."
-            ],
-            [
-              "audit-score-confirmed",
-              "QA",
-              "Kết quả audit đã được SM xác nhận."
-            ],
-            [
-              "action-plan-created",
-              "SM/QA theo phạm vi",
-              "Chi tiết Action Plan mới."
-            ],
-            [
-              "action-plan-due-soon / action-plan-overdue",
-              "SM/QA theo phạm vi",
-              "Chi tiết Action Plan cần xử lý."
-            ],
-            [
-              "audit-overdue-reminder",
-              "QC/QA theo phân công",
-              "Thực hiện audit hoặc kế hoạch audit bị trễ."
-            ]
+         "rows": [
+          [
+            "Kế hoạch audit được phát hành",
+            "QC/AM/SM trong phạm vi kế hoạch",
+            "Mở Kế hoạch audit hoặc màn Thực hiện audit liên quan."
+          ],
+          [
+            "Bài audit đã được nộp",
+            "QA và SM liên quan",
+            "Mở Kết quả audit của bài vừa được nộp."
+          ],
+          [
+            "Nhắc SM xác nhận điểm",
+            "SM",
+            "Mở Kết quả audit đang chờ xác nhận điểm."
+          ],
+          [
+            "Hệ thống tự xác nhận điểm sau 120 giờ",
+            "SM",
+            "Mở Kết quả audit đã được hệ thống tự xác nhận."
+          ],
+          [
+            "SM đã xác nhận điểm",
+            "QA",
+            "Mở Kết quả audit đã được SM xác nhận."
+          ],
+          [
+            "Action Plan mới được tạo",
+            "SM/QA theo phạm vi",
+            "Mở Chi tiết Action Plan mới."
+          ],
+          [
+            "Action Plan sắp đến hạn hoặc quá hạn",
+            "SM/QA theo phạm vi",
+            "Mở Chi tiết Action Plan cần xử lý."
+          ],
+          [
+            "Nhắc audit quá hạn",
+            "QC/QA theo phân công",
+            "Mở màn Thực hiện audit hoặc Kế hoạch audit bị trễ."
           ]
+        ]
         },
         {
           "type": "label",
@@ -2683,7 +2683,7 @@
             ],
             [
               "OM không thấy đủ cửa hàng",
-              "OM chỉ thấy dữ liệu thuộc brand được phân công. Kiểm tra role assignment scopeType brand và scopeIds brand."
+              "OM chỉ thấy dữ liệu thuộc brand được phân công. Kiểm tra phạm vi brand được phân công."
             ],
             [
               "COO xem dữ liệu theo phạm vi nào?",
