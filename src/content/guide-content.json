@@ -432,7 +432,7 @@
     },
     {
       "id": "dashboard-sm",
-      "title": "3.7. Dashboard SM",
+      "title": "3.7. Dashboard SM / Chủ nhượng quyền",
       "level": 2,
       "blocks": [
         {
@@ -441,7 +441,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Dashboard SM dùng để Store Manager theo dõi chất lượng cửa hàng mình phụ trách."
+          "text": "Dashboard SM / Chủ nhượng quyền dùng để Store Manager và Chủ nhượng quyền theo dõi chất lượng cửa hàng mình phụ trách."
         },
         {
           "type": "bullets",
@@ -455,7 +455,7 @@
           "type": "image",
           "src": "/assets/user-guide/2026-07-guide-refresh/03-sm-desktop-dashboard-overview.png",
           "alt": "Dashboard SM",
-          "caption": "Dashboard SM với filter tháng 6/2026, chụp từ cửa hàng có dữ liệu audit trong kỳ."
+          "caption": "Dashboard SM / Chủ nhượng quyền với filter tháng 6/2026, chụp từ cửa hàng có dữ liệu audit trong kỳ."
         }
       ]
     },
