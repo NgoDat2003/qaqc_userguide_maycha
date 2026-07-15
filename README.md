@@ -35,7 +35,7 @@ The script regenerates:
 
 - `src/content/guide-content.json`
 - `public/assets/user-guide/*`
-- `public/downloads/huong-dan-su-dung-he-thong-qaqc-uat-27-05-2026.docx`
+- `public/downloads/huong-dan-qaqc.docx`
 
 ## Vercel
 

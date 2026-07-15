@@ -4,7 +4,7 @@
   "scope": "Hướng dẫn đầy đủ thao tác hệ thống QA/QC: dashboard, dữ liệu nền, checklist, audit plan, audit execution, audit result, Action Plan, notification và FAQ; cập nhật role OM/COO, nhượng quyền và xác nhận điểm 120 giờ",
   "audience": "Admin/QA, AM, QC, SM và người vận hành QA/QC",
   "notice": "Bản web này thay thế nội dung guide cũ làm bản tra cứu chính. File Word được tạo từ cùng nội dung với bản web.",
-  "sourceDocument": "/downloads/huong-dan-su-dung-he-thong-qaqc-maycha-01-06-2026.docx",
+  "sourceDocument": "/downloads/huong-dan-qaqc.docx",
   "imageCount": 58,
   "sections": [
     {
@@ -2689,3 +2689,4 @@
     }
   ]
 }
+

@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import re
@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTENT_JSON = ROOT / "src" / "content" / "guide-content.json"
 PUBLIC_DIR = ROOT / "public"
 DOWNLOAD_DIR = PUBLIC_DIR / "downloads"
-OUTPUT_NAME = "huong-dan-su-dung-he-thong-qaqc-maycha-01-06-2026.docx"
+OUTPUT_NAME = "huong-dan-qaqc.docx"
 
 
 def slugify(text: str, fallback: str) -> str:
@@ -291,3 +291,4 @@ def build_document():
 
 if __name__ == "__main__":
     build_document()
+
