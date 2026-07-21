@@ -9,11 +9,11 @@
 
 ## Nguồn nội dung chuẩn cho bản web
 
-`src/content/guide-content.json` là nguồn nội dung canonical duy nhất của **bản web** trong release này. Ảnh minh họa được tham chiếu từ `public/assets/user-guide/` và chỉ được dùng khi ledger Phase 2 đánh dấu `accepted` cùng `includeInGuide=true`.
+`src/content/guide-content.json` là nguồn nội dung canonical cho bản web và Word. Ảnh minh họa được tham chiếu từ `public/assets/user-guide/`; bản ledger runtime đóng gói tại `src/content/phase2-evidence-ledger.json` để build độc lập trên Vercel, không phụ thuộc thư mục `plans` ngoài web package.
 
-Ba file Word legacy là bản cũ, **chưa đồng bộ Phase 2** và không được ship trong `public` hoặc `dist`. Chúng được bảo toàn ngoài vùng public tại `artifacts/word-legacy/`; schema web đã bỏ `sourceDocument` nên preview và production không công bố URL tải Word.
+Ba file Word legacy được bảo toàn tại `artifacts/word-legacy/` và không được ship. Bản Word hiện hành `public/downloads/huong-dan-qaqc.docx` được sinh từ cùng `guide-content.json`, gồm đủ 90 mục và 99 vị trí ảnh, đồng bộ với bản web.
 
-Menu Phase 2 tổ chức theo tính năng và hành trình nghiệp vụ. Riêng chương Dashboard tách thành sáu mục độc lập cho TnD Manager, Taskforce, COO, OM, AM và SM để phản ánh đúng điểm vào và phạm vi từng vai trò. Đây là bản phát hành **web-only**; không đồng bộ ngược sang Word. Menu cha/con dùng accordion: mỗi lần chỉ mở một mục cha; nút toggle chỉ đóng/mở nhóm, hỗ trợ bàn phím và không tự điều hướng nội dung.
+Menu Phase 2 tổ chức theo tính năng và hành trình nghiệp vụ. Riêng chương Dashboard tách thành sáu mục độc lập cho TnD Manager, Taskforce, COO, OM, AM và SM để phản ánh đúng điểm vào và phạm vi từng vai trò. Bản web và Word dùng chung nội dung canonical; nút **Tải hướng dẫn Word** luôn trỏ tới file hiện hành. Menu cha/con dùng accordion: mỗi lần chỉ mở một mục cha; nút toggle chỉ đóng/mở nhóm, hỗ trợ bàn phím và không tự điều hướng nội dung.
 
 ## Chạy local
 
@@ -30,13 +30,13 @@ npm run build
 npm run preview
 ```
 
-Quy trình release hiện tại là web-only:
+Quy trình release web + Word:
 
-1. Validator đọc `guide-content.json`, kiểm tra schema, thứ tự/ID section, `imageCount` và asset.
-2. `npm run build` tạo bản web trong `dist`.
-3. `npm run preview` dùng để kiểm tra bản đã build.
+1. `npm run build:word` sinh duy nhất `public/downloads/huong-dan-qaqc.docx` từ nội dung canonical.
+2. Validator kiểm tra schema, section, ảnh và DOCX hiện hành; `npm run build` tạo bản web trong `dist` cùng đúng một DOCX.
+3. `npm run preview` và `npm run test:guide` kiểm tra tải Word hiện hành, chặn URL Word legacy và xác nhận menu/guide.
 
-**Không chạy `npm run build:word`, `scripts/build-word-guide.py` hoặc quy trình extract Word trong release này.** Các lệnh đó có thể tạo/phục hồi tài liệu chưa đồng bộ và không thuộc phạm vi Phase 2 web.
+`npm run build:word` chỉ chạy khi nội dung canonical hoặc ảnh thay đổi; `npm run build` không tự sinh lại Word ở mọi lần build.
 
 ## Phạm vi Training Phase 2
 

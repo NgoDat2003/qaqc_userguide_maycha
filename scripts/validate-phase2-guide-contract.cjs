@@ -45,10 +45,11 @@ const sortedUnique = (values) => [...new Set(values)].sort();
 const sameStringArray = (left, right) => JSON.stringify(left) === JSON.stringify(right);
 
 function validatePhase2GuideContract({ guide, projectRoot, fail }) {
-  const ledgerPath = path.resolve(
-    projectRoot, '..', '..', 'plans', '260721-1435-phase2-training-web-full-guide-v2',
-    'reports', 'phase2-evidence-ledger.json',
-  );
+  const ledgerPath = path.join(projectRoot, 'src', 'content', 'phase2-evidence-ledger.json');
+  if (!ledgerPath.startsWith(path.resolve(projectRoot) + path.sep)) {
+    fail('Phase 2 ledger must resolve inside the standalone web package.');
+    return { phase2Sections: 0, phase2AcceptedImages: 0 };
+  }
   let ledger;
   try {
     ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
