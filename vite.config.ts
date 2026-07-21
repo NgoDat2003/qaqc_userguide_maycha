@@ -1,14 +1,14 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 
-function blockLegacyWordDownloads(): Plugin {
+function serveCurrentWordOnly(): Plugin {
   const rejectDocx = (
     request: { url?: string },
     response: { statusCode: number; setHeader: (name: string, value: string) => void; end: (body?: string) => void },
     next: () => void,
   ) => {
     const pathname = new URL(request.url ?? "/", "http://local").pathname.toLowerCase();
-    if (!pathname.endsWith(".docx")) {
+    if (!pathname.endsWith(".docx") || pathname === "/downloads/huong-dan-qaqc.docx") {
       next();
       return;
     }
@@ -19,7 +19,7 @@ function blockLegacyWordDownloads(): Plugin {
   };
 
   return {
-    name: "block-legacy-word-downloads",
+    name: "serve-current-word-only",
     configureServer(server) {
       server.middlewares.use(rejectDocx);
     },
@@ -30,7 +30,7 @@ function blockLegacyWordDownloads(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [blockLegacyWordDownloads(), react()],
+  plugins: [serveCurrentWordOnly(), react()],
   build: {
     rollupOptions: {
       output: {

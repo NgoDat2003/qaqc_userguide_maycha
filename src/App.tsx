@@ -35,13 +35,21 @@ function getSectionIdForTarget(targetId: string): string {
   return guide.sections.some((section) => section.id === targetId) ? targetId : "";
 }
 
+function getExpandedPhaseForTarget(targetId: string): GuidePhaseId | null {
+  const targetSection = guide.sections.find((section) => section.id === targetId);
+  return targetSection ? getPhaseForSection(targetSection) : null;
+}
+
 export default function App() {
-  const initialPhaseId = getPhaseForTargetId(readHashId());
+  const initialTargetId = readHashId();
+  const initialPhaseId = getPhaseForTargetId(initialTargetId);
   const observerSuppressedUntil = useRef(0);
   const [activePhaseId, setActivePhaseId] = useState<GuidePhaseId>(initialPhaseId);
-  const [expandedPhaseId, setExpandedPhaseId] = useState<GuidePhaseId | null>(initialPhaseId);
+  const [expandedPhaseId, setExpandedPhaseId] = useState<GuidePhaseId | null>(() =>
+    getExpandedPhaseForTarget(initialTargetId),
+  );
   const [activeSectionId, setActiveSectionId] = useState(() =>
-    getSectionIdForTarget(readHashId()),
+    getSectionIdForTarget(initialTargetId),
   );
   const activePhase = getGuidePhase(activePhaseId);
   const activeSections = useMemo(
@@ -102,7 +110,7 @@ export default function App() {
       const targetPhaseId = getPhaseForTargetId(targetId);
       suppressObserver();
       setActivePhaseId(targetPhaseId);
-      setExpandedPhaseId(targetPhaseId);
+      setExpandedPhaseId(getExpandedPhaseForTarget(targetId));
       setActiveSectionId(getSectionIdForTarget(targetId));
       if (targetId) scrollToTarget(targetId);
     };

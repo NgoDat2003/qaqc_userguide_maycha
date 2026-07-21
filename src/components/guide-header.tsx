@@ -1,4 +1,4 @@
-﻿import { Button, Tag } from "antd";
+import { Button, Tag } from "antd";
 import type { GuideContent } from "../content/guide-content";
 import type { GuidePhase } from "../content/guide-phases";
 
@@ -31,10 +31,12 @@ export function GuideHeader({ guide, activePhase, sectionCount, imageCount }: Gu
         <div className="header-actions">
           <Button
             className="download-button"
-            disabled
-            aria-label="Word chưa đồng bộ với Phase 2"
+            type="primary"
+            href="/downloads/huong-dan-qaqc.docx"
+            download
+            aria-label="Tải hướng dẫn Word"
           >
-            Word chưa đồng bộ Phase 2
+            Tải hướng dẫn Word
           </Button>
         </div>
       </div>

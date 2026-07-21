@@ -1,4 +1,4 @@
-﻿const crypto = require('crypto');
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
@@ -61,12 +61,17 @@ function validatePhase2GuideContract({ guide, projectRoot, fail }) {
     fail('sourceDocument is forbidden in the web-only guide schema.');
   }
   const publicDownloads = path.join(projectRoot, 'public', 'downloads');
-  if (fs.existsSync(publicDownloads)) {
-    const publicWordFiles = fs.readdirSync(publicDownloads)
-      .filter((name) => name.toLowerCase().endsWith('.docx'));
-    if (publicWordFiles.length > 0) {
-      fail(`Public downloads must not contain Word files: ${publicWordFiles.join(', ')}.`);
-    }
+  const currentWordName = 'huong-dan-qaqc.docx';
+  const publicWordFiles = fs.existsSync(publicDownloads)
+    ? fs.readdirSync(publicDownloads).filter((name) => name.toLowerCase().endsWith('.docx'))
+    : [];
+  if (!sameStringArray(publicWordFiles.sort(), [currentWordName])) {
+    fail(`Public downloads must contain exactly ${currentWordName}; found: ${publicWordFiles.join(', ') || 'none'}.`);
+  } else {
+    const currentWord = path.join(publicDownloads, currentWordName);
+    const bytes = fs.readFileSync(currentWord);
+    if (bytes.length < 100_000) fail(`Current Word guide is unexpectedly small: ${bytes.length} bytes.`);
+    if (bytes[0] !== 0x50 || bytes[1] !== 0x4b) fail('Current Word guide is not a valid ZIP-based DOCX.');
   }
 
   const phase1 = guide.sections.slice(0, 50);

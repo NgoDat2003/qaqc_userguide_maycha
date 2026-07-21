@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import re
@@ -18,6 +18,23 @@ CONTENT_JSON = ROOT / "src" / "content" / "guide-content.json"
 PUBLIC_DIR = ROOT / "public"
 DOWNLOAD_DIR = PUBLIC_DIR / "downloads"
 OUTPUT_NAME = "huong-dan-qaqc.docx"
+DISPLAY_REPLACEMENTS = (
+    (re.compile(r"\bUAT\b", re.IGNORECASE), "hệ thống"),
+    (re.compile(r"\bledger\b", re.IGNORECASE), "danh sách hình ảnh"),
+    (re.compile(r"\bprivate\b", re.IGNORECASE), "nội bộ"),
+)
+
+
+def sanitize_display(value):
+    if isinstance(value, str):
+        for pattern, replacement in DISPLAY_REPLACEMENTS:
+            value = pattern.sub(replacement, value)
+        return value
+    if isinstance(value, list):
+        return [sanitize_display(item) for item in value]
+    if isinstance(value, dict):
+        return {key: sanitize_display(item) for key, item in value.items()}
+    return value
 
 
 def slugify(text: str, fallback: str) -> str:
@@ -240,7 +257,7 @@ def mark_fields_dirty(doc: Document):
 
 
 def build_document():
-    guide = json.loads(CONTENT_JSON.read_text(encoding="utf-8"))
+    guide = sanitize_display(json.loads(CONTENT_JSON.read_text(encoding="utf-8")))
     anchors = {
         section["id"]: bookmark_name(section["id"], f"section_{index + 1}")
         for index, section in enumerate(guide["sections"])
@@ -256,6 +273,15 @@ def build_document():
     styles = doc.styles
     styles["Normal"].font.name = "Arial"
     styles["Normal"].font.size = Pt(11)
+    for style_name, size, color in (("Title", 22, "0C172B"), ("Heading 1", 16, "0C172B"), ("Heading 2", 13, "274C77")):
+        style = styles[style_name]
+        style.font.name = "Arial"
+        style.font.size = Pt(size)
+        style.font.bold = True
+        style.font.color.rgb = RGBColor.from_string(color)
+        style._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), "Arial")
+    styles["Heading 1"].paragraph_format.keep_with_next = True
+    styles["Heading 2"].paragraph_format.keep_with_next = True
 
     add_cover(doc, guide)
     add_manual_toc(doc, guide["sections"], anchors)
@@ -283,6 +309,8 @@ def build_document():
                 add_image(doc, block)
 
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    for stale_word in DOWNLOAD_DIR.glob("*.docx"):
+        stale_word.unlink()
     output_path = DOWNLOAD_DIR / OUTPUT_NAME
     mark_fields_dirty(doc)
     doc.save(output_path)
