@@ -1,12 +1,15 @@
-import { Button, Tag } from "antd";
-import { DownloadOutlined } from "@ant-design/icons";
+﻿import { Button, Tag } from "antd";
 import type { GuideContent } from "../content/guide-content";
+import type { GuidePhase } from "../content/guide-phases";
 
 type GuideHeaderProps = {
   guide: GuideContent;
+  activePhase: GuidePhase;
+  sectionCount: number;
+  imageCount: number;
 };
 
-export function GuideHeader({ guide }: GuideHeaderProps) {
+export function GuideHeader({ guide, activePhase, sectionCount, imageCount }: GuideHeaderProps) {
   return (
     <header className="guide-header">
       <div className="guide-header-inner">
@@ -14,24 +17,24 @@ export function GuideHeader({ guide }: GuideHeaderProps) {
           QA
         </div>
         <div className="header-copy">
-          <p className="eyebrow">Maycha QA/QC UAT</p>
+          <p className="eyebrow">Maycha QA/QC + Training</p>
           <h1>{guide.title}</h1>
-          <p className="guide-subtitle">{guide.scope}</p>
+          <p className="guide-subtitle">
+            Đang xem: <strong>{activePhase.label}</strong> · {activePhase.chapterRange}
+          </p>
           <div className="header-tags" aria-label="Thông tin tài liệu">
             <Tag className="soft-tag gold">Phiên bản {guide.version}</Tag>
-            <Tag className="soft-tag blue">{guide.sections.length} mục</Tag>
-            <Tag className="soft-tag green">{guide.imageCount} ảnh</Tag>
+            <Tag className="soft-tag blue">{sectionCount} mục trong phần</Tag>
+            <Tag className="soft-tag green">{imageCount} ảnh trong phần</Tag>
           </div>
         </div>
         <div className="header-actions">
           <Button
             className="download-button"
-            icon={<DownloadOutlined />}
-            href={guide.sourceDocument}
-            target="_blank"
-            rel="noreferrer"
+            disabled
+            aria-label="Word chưa đồng bộ với Phase 2"
           >
-            Tải Word
+            Word chưa đồng bộ Phase 2
           </Button>
         </div>
       </div>

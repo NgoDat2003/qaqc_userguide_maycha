@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
-    "build": "tsc --noEmit && vite build",
+    "build": "node scripts/build-guide-content.cjs && tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "test:guide": "node ../../node_modules/@playwright/test/cli.js test tests/phase2-training-guide.spec.ts tests/phase2-training-web-full-guide.spec.ts --workers=1 --reporter=line",
     "extract:guide": "python scripts/extract-docx-guide.py",
     "build:word": "python scripts/build-word-guide.py"
   },

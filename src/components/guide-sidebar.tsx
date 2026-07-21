@@ -1,8 +1,20 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import type { GuideSection } from "../content/guide-content";
+import {
+  GUIDE_PHASES,
+  getSectionsForPhase,
+  type GuidePhaseId,
+} from "../content/guide-phases";
 
 type GuideSidebarProps = {
   sections: GuideSection[];
+  activePhaseId: GuidePhaseId;
+  expandedPhaseId: GuidePhaseId | null;
+  activeSectionId: string;
+  onPhaseSelect: (phaseId: GuidePhaseId) => void;
+  onPhaseToggle: (phaseId: GuidePhaseId) => void;
+  onSectionSelect: (sectionId: string) => void;
 };
 
 type TocItem = GuideSection & {
@@ -26,36 +38,24 @@ function buildTocItems(sections: GuideSection[]): TocItem[] {
   return items;
 }
 
-function jumpToSection(sectionId: string) {
-  document.getElementById(sectionId)?.scrollIntoView({ block: "start", behavior: "auto" });
-  window.history.replaceState(null, "", `#${sectionId}`);
-}
-
-export function GuideSidebar({ sections }: GuideSidebarProps) {
-  const tocItems = useMemo(() => buildTocItems(sections), [sections]);
-  const [activeId, setActiveId] = useState(sections[0]?.id ?? "");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-
-        if (visible?.target.id) {
-          setActiveId(visible.target.id);
-        }
-      },
-      { rootMargin: "-12% 0px -72% 0px", threshold: 0.01 },
-    );
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, [sections]);
+export function GuideSidebar({
+  sections,
+  activePhaseId,
+  expandedPhaseId,
+  activeSectionId,
+  onPhaseSelect,
+  onPhaseToggle,
+  onSectionSelect,
+}: GuideSidebarProps) {
+  const tocItemsByPhase = useMemo(
+    () => new Map<GuidePhaseId, TocItem[]>(
+      GUIDE_PHASES.map((phase) => [
+        phase.id,
+        buildTocItems(getSectionsForPhase(sections, phase.id)),
+      ]),
+    ),
+    [sections],
+  );
 
   return (
     <aside className="guide-sidebar">
@@ -63,36 +63,73 @@ export function GuideSidebar({ sections }: GuideSidebarProps) {
         <div className="toc-header">
           <span className="toc-kicker">Nội dung</span>
           <div className="toc-title">Mục lục</div>
-          <p>{tocItems.length} phần chính, bấm để chuyển nhanh trong tài liệu.</p>
+          <p>Chọn tên phần để mở nội dung; dùng nút mũi tên để thu gọn hoặc xem nhanh mục lục.</p>
         </div>
         <nav className="toc-nav" aria-label="Mục lục tài liệu">
-          {tocItems.map((item) => (
-            <div className="toc-group" key={item.id}>
-              <button
-                className={`toc-link level-1 ${activeId === item.id ? "active" : ""}`}
-                type="button"
-                onClick={() => {
-                  setActiveId(item.id);
-                  jumpToSection(item.id);
-                }}
-              >
-                {item.title}
-              </button>
-              {item.children.map((child) => (
-                <button
-                  className={`toc-link level-2 ${activeId === child.id ? "active" : ""}`}
-                  type="button"
-                  key={child.id}
-                  onClick={() => {
-                    setActiveId(child.id);
-                    jumpToSection(child.id);
-                  }}
-                >
-                  {child.title}
-                </button>
-              ))}
-            </div>
-          ))}
+          <div className="toc-phase-list">
+            {GUIDE_PHASES.map((phase) => {
+              const isActive = phase.id === activePhaseId;
+              const isExpanded = phase.id === expandedPhaseId;
+              const panelId = `desktop-${phase.id}-chapters`;
+              const tocItems = tocItemsByPhase.get(phase.id) ?? [];
+
+              return (
+                <div className={`toc-phase-group ${isExpanded ? "expanded" : ""}`} key={phase.id}>
+                  <div className="toc-phase-header">
+                    <button
+                      className={`toc-phase-button toc-phase-select ${isActive ? "active" : ""}`}
+                      type="button"
+                      aria-current={isActive ? "page" : undefined}
+                      onClick={() => onPhaseSelect(phase.id)}
+                    >
+                      <span className="toc-phase-copy">
+                        <span>{phase.label}</span>
+                        <small>{phase.chapterRange}</small>
+                      </span>
+                    </button>
+                    <button
+                      className="toc-phase-toggle"
+                      type="button"
+                      aria-expanded={isExpanded}
+                      aria-controls={panelId}
+                      aria-label={`${isExpanded ? "Thu gọn" : "Mở rộng"} ${phase.label}`}
+                      onClick={() => onPhaseToggle(phase.id)}
+                    >
+                      {isExpanded ? <DownOutlined aria-hidden="true" /> : <RightOutlined aria-hidden="true" />}
+                    </button>
+                  </div>
+
+                  {isExpanded && (
+                    <div className="toc-phase-children" id={panelId}>
+                      {tocItems.map((item) => (
+                        <div className="toc-group" key={item.id}>
+                          <button
+                            className={`toc-link level-1 ${activeSectionId === item.id ? "active" : ""}`}
+                            type="button"
+                            aria-current={activeSectionId === item.id ? "location" : undefined}
+                            onClick={() => onSectionSelect(item.id)}
+                          >
+                            {item.title}
+                          </button>
+                          {item.children.map((child) => (
+                            <button
+                              className={`toc-link level-2 ${activeSectionId === child.id ? "active" : ""}`}
+                              type="button"
+                              key={child.id}
+                              aria-current={activeSectionId === child.id ? "location" : undefined}
+                              onClick={() => onSectionSelect(child.id)}
+                            >
+                              {child.title}
+                            </button>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </nav>
       </div>
     </aside>

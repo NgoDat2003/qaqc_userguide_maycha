@@ -1,11 +1,10 @@
 {
-  "title": "Hướng dẫn sử dụng hệ thống QA/QC Maycha",
-  "version": "Bản cập nhật 15/07/2026",
-  "scope": "Hướng dẫn đầy đủ thao tác hệ thống QA/QC: dashboard, dữ liệu nền, checklist, audit plan, audit execution, audit result, Action Plan, notification và FAQ; cập nhật role OM/COO, nhượng quyền và xác nhận điểm 120 giờ",
-  "audience": "Admin/QA, AM, QC, SM và người vận hành QA/QC",
-  "notice": "Bản web này thay thế nội dung guide cũ làm bản tra cứu chính. File Word được tạo từ cùng nội dung với bản web.",
-  "sourceDocument": "/downloads/huong-dan-qaqc.docx",
-  "imageCount": 58,
+  "title": "Hướng dẫn sử dụng hệ thống QA/QC và Training Maycha",
+  "version": "21/07/2026",
+  "scope": "Hướng dẫn sử dụng hệ thống QA/QC và Training Maycha: chương 1–11 dành cho QA/QC; chương 12–20 dành cho TnD Manager, Taskforce, COO, OM, AM và SM sử dụng các chức năng Training.",
+  "audience": "Người dùng hệ thống QA/QC và Training Maycha theo vai trò được phân công.",
+  "notice": "Training tự xác nhận kết quả sau 48 giờ; QA/QC áp dụng thời hạn 120 giờ. Operation Head (OH) chưa áp dụng trong nội dung Training của tài liệu này.",
+  "imageCount": 99,
   "sections": [
     {
       "id": "tong-quan",
@@ -527,7 +526,6 @@
       "title": "4.1. Thương hiệu",
       "level": 2,
       "blocks": [
-       
         {
           "type": "label",
           "text": "Mục đích"
@@ -607,7 +605,6 @@
       "title": "4.2. Địa bàn",
       "level": 2,
       "blocks": [
-      
         {
           "type": "label",
           "text": "Mục đích"
@@ -689,7 +686,6 @@
       "title": "4.3. Cửa hàng",
       "level": 2,
       "blocks": [
-      
         {
           "type": "label",
           "text": "Mục đích"
@@ -2503,48 +2499,48 @@
             "Ai thường nhận",
             "Màn được mở khi bấm vào"
           ],
-         "rows": [
-          [
-            "Kế hoạch audit được phát hành",
-            "QC/AM/SM trong phạm vi kế hoạch",
-            "Mở Kế hoạch audit hoặc màn Thực hiện audit liên quan."
-          ],
-          [
-            "Bài audit đã được nộp",
-            "QA và SM liên quan",
-            "Mở Kết quả audit của bài vừa được nộp."
-          ],
-          [
-            "Nhắc SM xác nhận điểm",
-            "SM",
-            "Mở Kết quả audit đang chờ xác nhận điểm."
-          ],
-          [
-            "Hệ thống tự xác nhận điểm sau 120 giờ",
-            "SM",
-            "Mở Kết quả audit đã được hệ thống tự xác nhận."
-          ],
-          [
-            "SM đã xác nhận điểm",
-            "QA",
-            "Mở Kết quả audit đã được SM xác nhận."
-          ],
-          [
-            "Action Plan mới được tạo",
-            "SM/QA theo phạm vi",
-            "Mở Chi tiết Action Plan mới."
-          ],
-          [
-            "Action Plan sắp đến hạn hoặc quá hạn",
-            "SM/QA theo phạm vi",
-            "Mở Chi tiết Action Plan cần xử lý."
-          ],
-          [
-            "Nhắc audit quá hạn",
-            "QC/QA theo phân công",
-            "Mở màn Thực hiện audit hoặc Kế hoạch audit bị trễ."
+          "rows": [
+            [
+              "Kế hoạch audit được phát hành",
+              "QC/AM/SM trong phạm vi kế hoạch",
+              "Mở Kế hoạch audit hoặc màn Thực hiện audit liên quan."
+            ],
+            [
+              "Bài audit đã được nộp",
+              "QA và SM liên quan",
+              "Mở Kết quả audit của bài vừa được nộp."
+            ],
+            [
+              "Nhắc SM xác nhận điểm",
+              "SM",
+              "Mở Kết quả audit đang chờ xác nhận điểm."
+            ],
+            [
+              "Hệ thống tự xác nhận điểm sau 120 giờ",
+              "SM",
+              "Mở Kết quả audit đã được hệ thống tự xác nhận."
+            ],
+            [
+              "SM đã xác nhận điểm",
+              "QA",
+              "Mở Kết quả audit đã được SM xác nhận."
+            ],
+            [
+              "Action Plan mới được tạo",
+              "SM/QA theo phạm vi",
+              "Mở Chi tiết Action Plan mới."
+            ],
+            [
+              "Action Plan sắp đến hạn hoặc quá hạn",
+              "SM/QA theo phạm vi",
+              "Mở Chi tiết Action Plan cần xử lý."
+            ],
+            [
+              "Nhắc audit quá hạn",
+              "QC/QA theo phân công",
+              "Mở màn Thực hiện audit hoặc Kế hoạch audit bị trễ."
+            ]
           ]
-        ]
         },
         {
           "type": "label",
@@ -2686,7 +2682,3045 @@
           ]
         }
       ]
+    },
+    {
+      "id": "training-phase2-overview",
+      "title": "12. Tổng quan Training Phase 2",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager, Taskforce, COO, OM, AM và SM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Giúp người dùng hiểu cách vào phân hệ Training, phạm vi công việc của từng vai trò và các nguyên tắc vận hành chung."
+        },
+        {
+          "type": "label",
+          "text": "Vai trò và phạm vi sử dụng"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Vai trò",
+            "Phạm vi dữ liệu và công việc",
+            "Màn hình thường dùng"
+          ],
+          "rows": [
+            [
+              "TnD Manager",
+              "Quản lý toàn bộ dữ liệu Training; cấu hình tiêu chí, checklist, kế hoạch, phân công người thực hiện và rà soát kết quả.",
+              "Dashboard TnD, Tiêu chí, Checklist, Kế hoạch chấm, Kết quả bài chấm, Action Plan"
+            ],
+            [
+              "Taskforce",
+              "Thực hiện các bài Store Visit hoặc Camera Check được phân công và theo dõi kết quả trong phạm vi công việc của mình.",
+              "Lịch chấm của tôi, Thực hiện bài chấm, Kết quả bài chấm"
+            ],
+            [
+              "COO",
+              "Theo dõi dữ liệu Training, kết quả và Action Plan trong phạm vi toàn công ty.",
+              "Dashboard COO, Kết quả bài chấm, Action Plan"
+            ],
+            [
+              "OM",
+              "Theo dõi dữ liệu Training, kết quả và Action Plan của các thương hiệu được phân công.",
+              "Dashboard OM, Kết quả bài chấm, Action Plan"
+            ],
+            [
+              "AM",
+              "Chỉ thực hiện bài khi đồng thời được TnD Manager phân công đích danh và cửa hàng thuộc phạm vi AM đang quản lý.",
+              "Dashboard AM, Lịch chấm của tôi, Thực hiện bài chấm, Kết quả bài chấm, Action Plan"
+            ],
+            [
+              "SM",
+              "Theo dõi kết quả của cửa hàng phụ trách, xác nhận điểm trong 48 giờ và cập nhật Action Plan.",
+              "Dashboard SM, Kết quả bài chấm, Action Plan"
+            ]
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Luồng vận hành tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "TnD Manager cấu hình tiêu chí và checklist, tạo hoặc nhân bản kế hoạch, phát hành kế hoạch và phân công Taskforce hoặc AM đủ điều kiện.",
+            "Taskforce hoặc AM đủ điều kiện mở Lịch chấm của tôi và thực hiện bài Store Visit hoặc Camera Check được giao.",
+            "Người thực hiện trả lời tiêu chí, bổ sung ghi chú và ảnh kèm theo khi cần, lưu nháp rồi nộp bài.",
+            "TnD Manager rà soát kết quả và có thể chỉnh sửa bài đã nộp khi bài chưa được SM xác nhận và chưa tạo Action Plan.",
+            "SM xác nhận điểm trong 48 giờ; nếu SM không thao tác trong thời hạn này, hệ thống tự xác nhận kết quả.",
+            "Các câu Không đạt được chuyển thành Action Plan; Dashboard và danh sách kết quả được cập nhật theo trạng thái mới."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "12.1. Vào phân hệ Training",
+            "12.2. Phạm vi vận hành Training",
+            "12.3. Phân quyền và phạm vi dữ liệu"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Operation Head (OH) chưa áp dụng trong tài liệu hướng dẫn này.",
+            "Training tự xác nhận kết quả sau 48 giờ; QA/QC áp dụng thời hạn 120 giờ.",
+            "Tên menu và nút thao tác có thể khác nhau theo quyền của từng tài khoản."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-department-switch",
+      "title": "12.1. Vào phân hệ Training",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tất cả người dùng Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chuyển đúng phân hệ để sử dụng menu, dữ liệu và chức năng Training."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Tài khoản đã được cấp quyền Training.",
+            "Người dùng đã đăng nhập thành công."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tại thanh điều hướng, mở mục chọn phân hệ.",
+            "Chọn Training.",
+            "Kiểm tra tên phân hệ đang hiển thị trên thanh điều hướng.",
+            "Kiểm tra menu bên trái và chọn chức năng cần sử dụng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Màn hình hiển thị các menu Training phù hợp với vai trò.",
+            "Dữ liệu trên màn hình được giới hạn theo phạm vi được phân công."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nếu không thấy Training, đăng xuất rồi đăng nhập lại trước khi liên hệ bộ phận hỗ trợ.",
+            "Luôn kiểm tra đúng phân hệ trước khi tạo kế hoạch, thực hiện bài chấm hoặc xem kết quả."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/training-switch-module-fullscreen.png",
+          "alt": "Toàn màn hình bộ chọn phân hệ với Training đang được chọn",
+          "caption": "Bộ chọn phân hệ hiển thị QA/QC và Training; Training đang được chọn."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-01-tnd-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của TnD Manager",
+          "caption": "Phân hệ Training của TnD Manager với menu chức năng và khu vực làm việc."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-02-taskforce-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của Taskforce",
+          "caption": "Phân hệ Training của Taskforce với các chức năng phục vụ thực hiện bài chấm."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-03-coo-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của COO",
+          "caption": "Phân hệ Training của COO với các chức năng theo dõi và quản lý kết quả."
+        }
+      ]
+    },
+    {
+      "id": "training-operating-scope",
+      "title": "12.2. Phạm vi vận hành Training",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager, Taskforce, COO, OM, AM và SM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Giúp từng vai trò nhận biết các chức năng thường dùng và phạm vi dữ liệu được xem."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Tài khoản đã được gán đúng vai trò.",
+            "Cửa hàng, khu vực hoặc đơn vị đã được phân công đầy đủ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Vào phân hệ Training.",
+            "Mở lần lượt Dashboard, Kế hoạch chấm, Thực hiện bài chấm, Kết quả và Action Plan theo menu được cấp.",
+            "Kiểm tra bộ lọc và danh sách dữ liệu hiển thị.",
+            "Chỉ thao tác trên bản ghi thuộc phạm vi phụ trách."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "TnD Manager quản lý cấu hình, kế hoạch và theo dõi toàn bộ hoạt động Training.",
+            "Taskforce thực hiện các bài được giao.",
+            "COO, OM, AM và SM theo dõi dữ liệu theo cấp quản lý tương ứng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "AM chỉ thực hiện bài chấm khi đồng thời được TnD phân công đích danh và cửa hàng thuộc phạm vi AM quản lý.",
+            "SM chỉ xem và xử lý dữ liệu của cửa hàng đang phụ trách."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-04-om-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của OM",
+          "caption": "Phân hệ Training của OM hiển thị dữ liệu thuộc khu vực phụ trách."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-05-am-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của AM",
+          "caption": "Phân hệ Training của AM hiển thị dữ liệu các cửa hàng được phân công quản lý."
+        }
+      ]
+    },
+    {
+      "id": "training-scope-boundaries",
+      "title": "12.3. Phân quyền và phạm vi dữ liệu",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tất cả người dùng Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Đảm bảo mỗi người xem và xử lý đúng dữ liệu được phân công."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Thông tin vai trò và phạm vi quản lý đã được thiết lập.",
+            "Người dùng đang ở đúng phân hệ Training."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Kiểm tra vai trò đang đăng nhập.",
+            "Kiểm tra cửa hàng, khu vực hoặc đơn vị trong bộ lọc.",
+            "Mở một danh sách công việc để xác nhận dữ liệu thuộc phạm vi phụ trách.",
+            "Nếu thiếu hoặc thừa dữ liệu, ghi lại màn hình và liên hệ người quản trị phân quyền."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Menu và dữ liệu thay đổi phù hợp với từng vai trò.",
+            "Người dùng không nhìn thấy bản ghi nằm ngoài phạm vi được phân công."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không dùng tài khoản của người khác để thực hiện công việc.",
+            "Việc thay đổi phạm vi quản lý cần được thực hiện bởi người có quyền quản trị."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-dep-06-sm-training-shell.png",
+          "alt": "Toàn màn hình phân hệ Training của SM",
+          "caption": "Phân hệ Training của SM hiển thị dữ liệu cửa hàng đang phụ trách."
+        }
+      ]
+    },
+    {
+      "id": "training-role-dashboards",
+      "title": "13. Dashboard Training theo vai trò",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager, Taskforce, COO, OM, AM và SM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cung cấp màn hình tổng quan phù hợp với trách nhiệm và phạm vi quản lý của từng vai trò."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard hoặc màn hình công việc đầu tiên sau khi vào Training.",
+            "Chọn khoảng thời gian và các bộ lọc được cung cấp.",
+            "Đọc thẻ chỉ số, biểu đồ và danh sách cần ưu tiên.",
+            "Mở chức năng liên quan để xem và xử lý chi tiết."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "13.1. Dashboard TnD Manager",
+            "13.2. Màn hình công việc của Taskforce",
+            "13.3. Dashboard COO",
+            "13.4. Dashboard OM",
+            "13.5. Dashboard AM",
+            "13.6. Dashboard SM"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Mỗi vai trò có dữ liệu và bộ lọc khác nhau.",
+            "Taskforce tập trung vào danh sách bài được giao thay vì các chỉ số quản lý tổng hợp."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-tnd-manager",
+      "title": "13.1. Dashboard TnD Manager",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi tổng thể tiến độ kế hoạch, bài chấm, kết quả và các vấn đề cần xử lý trong Training."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã chọn phân hệ Training.",
+            "Dữ liệu kế hoạch và bài chấm đã phát sinh trong khoảng thời gian cần xem."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard.",
+            "Chọn khoảng thời gian.",
+            "Chọn thêm bộ lọc đơn vị, cửa hàng hoặc loại bài khi cần.",
+            "Đọc các thẻ chỉ số và biểu đồ.",
+            "Mở danh sách liên quan để xem chi tiết các trường hợp cần theo dõi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dashboard cập nhật theo bộ lọc đã chọn.",
+            "TnD Manager xác định được tiến độ và nhóm công việc cần ưu tiên."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đối chiếu khoảng thời gian trước khi so sánh số liệu.",
+            "Kết quả chỉ phản ánh dữ liệu thuộc điều kiện lọc hiện tại."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-01-tnd-dashboard-loaded.png",
+          "alt": "Toàn màn hình Dashboard TnD Manager đã tải đầy đủ dữ liệu",
+          "caption": "Dashboard TnD Manager hiển thị đầy đủ KPI tổng hợp và dữ liệu thực hiện Training."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-02-tnd-dashboard-tables.png",
+          "alt": "Toàn màn hình các bảng dữ liệu trên Dashboard TnD Manager",
+          "caption": "Các bảng tổng hợp theo AM, Taskforce và cửa hàng sau khi dữ liệu tải hoàn tất."
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-taskforce",
+      "title": "13.2. Màn hình công việc của Taskforce",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Giúp Taskforce xem nhanh các bài chấm được giao và bắt đầu công việc đúng hạn."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Taskforce đã được gán vào kế hoạch.",
+            "Kế hoạch đã được phát hành."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Vào phân hệ Training.",
+            "Mở Lịch chấm của tôi hoặc Thực hiện bài chấm.",
+            "Lọc theo thời gian và trạng thái nếu cần.",
+            "Chọn bài được giao để xem thông tin cửa hàng và thời hạn.",
+            "Bắt đầu hoặc tiếp tục bài chấm."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Danh sách hiển thị các bài được giao cho Taskforce.",
+            "Mỗi bài có thông tin và trạng thái để theo dõi tiến độ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nếu chưa có bài, kiểm tra lại khoảng thời gian và liên hệ TnD Manager để xác nhận phân công.",
+            "Taskforce chỉ thực hiện các bài được giao cho chính mình."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-08-taskforce-assigned-work.png",
+          "alt": "Toàn màn hình Lịch chấm Training của Taskforce có dữ liệu",
+          "caption": "Lịch chấm của Taskforce hiển thị các bài Training được phân công theo cửa hàng, kế hoạch, loại bài và trạng thái."
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-coo",
+      "title": "13.3. Dashboard COO",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "COO."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi tình hình Training ở cấp toàn công ty và nhận biết đơn vị cần được quan tâm."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã chọn phân hệ Training.",
+            "Có dữ liệu trong khoảng thời gian cần xem."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard.",
+            "Chọn khoảng thời gian.",
+            "Lọc theo đơn vị, khu vực hoặc loại bài khi cần.",
+            "So sánh các chỉ số và xu hướng.",
+            "Mở Kết quả hoặc Action Plan để xem chi tiết."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dashboard tổng hợp dữ liệu toàn công ty theo điều kiện lọc.",
+            "COO nhận biết được tiến độ, kết quả và vấn đề cần chỉ đạo."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kiểm tra điều kiện lọc trước khi so sánh giữa các đơn vị.",
+            "Dùng Kết quả và Action Plan để xem nguyên nhân cụ thể."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-03-coo-company-dashboard.png",
+          "alt": "Toàn màn hình Dashboard Training của COO",
+          "caption": "Dashboard COO tổng hợp tình hình Training theo phạm vi toàn công ty."
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-om",
+      "title": "13.4. Dashboard OM",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "OM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi tình hình Training tại khu vực hoặc đơn vị được phân công."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "OM đã được gán đúng phạm vi quản lý.",
+            "Có dữ liệu Training trong khoảng thời gian cần xem."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard Training.",
+            "Chọn khoảng thời gian và bộ lọc phù hợp.",
+            "Đọc chỉ số tổng hợp và xu hướng.",
+            "Xác định cửa hàng hoặc nhóm công việc cần theo dõi.",
+            "Mở Kết quả hoặc Action Plan để xem chi tiết."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dashboard chỉ hiển thị dữ liệu thuộc phạm vi OM quản lý.",
+            "OM có thể theo dõi tiến độ và tình trạng khắc phục theo khu vực."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nếu dữ liệu chưa đúng phạm vi, kiểm tra lại phân công quản lý.",
+            "Không dùng số liệu ngoài cùng khoảng thời gian để so sánh."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-04-om-dashboard-loaded.png",
+          "alt": "Toàn màn hình Dashboard OM đã tải đầy đủ dữ liệu",
+          "caption": "Dashboard OM hiển thị đầy đủ chỉ số Training trong phạm vi được phân công."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-05-om-dashboard-status.png",
+          "alt": "Toàn màn hình trạng thái bài chấm và Action Plan của OM",
+          "caption": "Dashboard OM tổng hợp bài chấm và Action Plan theo từng trạng thái xử lý."
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-am",
+      "title": "13.5. Dashboard AM",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "AM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi tiến độ Training và kết quả tại các cửa hàng được phân công quản lý."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "AM đã được gán các cửa hàng phụ trách.",
+            "Có dữ liệu Training tại các cửa hàng đó."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard Training.",
+            "Chọn khoảng thời gian.",
+            "Kiểm tra các thẻ chỉ số và danh sách cửa hàng.",
+            "Mở Kết quả để xem bài chấm cụ thể.",
+            "Mở Action Plan để theo dõi việc khắc phục."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dashboard hiển thị dữ liệu các cửa hàng thuộc phạm vi AM.",
+            "AM xác định được cửa hàng cần hỗ trợ hoặc theo dõi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Quyền xem cửa hàng không đồng nghĩa với quyền thực hiện mọi bài chấm.",
+            "AM chỉ thực hiện bài khi được TnD phân công đích danh và cửa hàng thuộc phạm vi AM quản lý."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-06-am-dashboard-scope.png",
+          "alt": "Toàn màn hình Dashboard Training của AM",
+          "caption": "Dashboard AM tổng hợp dữ liệu các cửa hàng được phân công quản lý."
+        }
+      ]
+    },
+    {
+      "id": "training-dashboard-sm",
+      "title": "13.6. Dashboard SM",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "SM."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi kết quả Training, trạng thái xác nhận và việc khắc phục tại cửa hàng đang phụ trách."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "SM đã được gán đúng cửa hàng.",
+            "Cửa hàng đã có bài chấm Training."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Dashboard Training.",
+            "Chọn khoảng thời gian nếu màn hình cung cấp bộ lọc.",
+            "Kiểm tra kết quả mới nhất và các việc cần xử lý.",
+            "Mở Kết quả để xem chi tiết điểm.",
+            "Mở Action Plan để cập nhật việc khắc phục."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dashboard hiển thị dữ liệu của cửa hàng SM phụ trách.",
+            "SM nhận biết được kết quả đang chờ xác nhận và Action Plan cần xử lý."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "SM cần xử lý kết quả trong thời hạn 48 giờ.",
+            "Nếu được phân công nhiều cửa hàng, kiểm tra đúng cửa hàng trước khi thao tác."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-db-07-sm-dashboard-scope.png",
+          "alt": "Toàn màn hình Dashboard Training của SM",
+          "caption": "Dashboard SM tổng hợp dữ liệu Training của cửa hàng đang phụ trách."
+        }
+      ]
+    },
+    {
+      "id": "training-criteria-checklist",
+      "title": "14. Tiêu chí và Checklist Training",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người được cấp quyền quản lý nội dung Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chuẩn hóa tiêu chí, câu hỏi và cách chấm cho Store Visit và Camera Check."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chuẩn bị nhóm tiêu chí và tiêu chí.",
+            "Tạo checklist theo loại bài chấm.",
+            "Kiểm tra câu hỏi, lựa chọn trả lời và cách tính điểm.",
+            "Phát hành phiên bản dùng cho kế hoạch mới."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "14.1. Thư viện tiêu chí và nhóm tiêu chí",
+            "14.2. Thư viện checklist Store Visit và Camera Check",
+            "14.3. Cấu hình, phiên bản và phát hành checklist"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không thay đổi nội dung đang được sử dụng nếu việc thay đổi có thể ảnh hưởng kết quả đã phát sinh.",
+            "Kiểm tra kỹ loại bài chấm trước khi gắn checklist vào kế hoạch."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-criteria",
+      "title": "14.1. Thư viện tiêu chí và nhóm tiêu chí",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền quản lý tiêu chí."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tạo và quản lý bộ tiêu chí dùng chung cho các checklist Training."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã xác định cấu trúc nhóm tiêu chí.",
+            "Đã chuẩn bị tên, nội dung và cách đánh giá của từng tiêu chí."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Tiêu chí.",
+            "Tìm kiếm để tránh tạo trùng.",
+            "Tạo nhóm tiêu chí nếu chưa có.",
+            "Thêm tiêu chí vào đúng nhóm và nhập đầy đủ thông tin.",
+            "Lưu rồi kiểm tra lại trong danh sách."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Tiêu chí xuất hiện đúng nhóm và sẵn sàng để đưa vào checklist.",
+            "Danh sách có thể tìm kiếm và theo dõi trạng thái sử dụng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đặt tên rõ ràng, thống nhất và dễ tìm.",
+            "Không xóa tiêu chí đang được sử dụng trong checklist hoặc kết quả đã phát sinh."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-crt-01-training-criteria-shell.png",
+          "alt": "Toàn màn hình danh sách tiêu chí Training",
+          "caption": "Danh sách tiêu chí Training với bộ lọc và các thông tin phục vụ quản lý tiêu chí."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-crt-02-training-criteria-limitation.png",
+          "alt": "Toàn màn hình quản lý nhóm tiêu chí Training",
+          "caption": "Màn hình quản lý nhóm tiêu chí và nội dung tiêu chí dùng trong checklist Training."
+        }
+      ]
+    },
+    {
+      "id": "training-checklist-template",
+      "title": "14.2. Thư viện checklist Store Visit và Camera Check",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền quản lý checklist."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tạo mẫu câu hỏi phù hợp với từng hình thức chấm Training."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Tiêu chí cần dùng đã được tạo.",
+            "Đã xác định checklist dành cho Store Visit hay Camera Check."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Checklist.",
+            "Chọn tạo mới hoặc mở checklist cần chỉnh sửa.",
+            "Chọn loại bài chấm.",
+            "Thêm nhóm tiêu chí và câu hỏi theo thứ tự thực hiện.",
+            "Thiết lập lựa chọn trả lời, điểm số và yêu cầu ảnh kèm theo.",
+            "Lưu và xem lại toàn bộ checklist."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Checklist hiển thị đầy đủ nhóm câu hỏi và cấu hình chấm điểm.",
+            "Checklist sẵn sàng để kiểm tra trước khi phát hành."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không dùng chung một checklist nếu hai hình thức chấm có nội dung hoặc cách đánh giá khác nhau.",
+            "Kiểm tra tổng điểm và các câu hỏi bắt buộc trước khi phát hành."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-chk-01-checklist-shell-crop.png",
+          "alt": "Toàn màn hình danh sách checklist Training",
+          "caption": "Danh sách checklist Store Visit và Camera Check với trạng thái sử dụng."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-chk-02-checklist-detail-limitation.png",
+          "alt": "Toàn màn hình chi tiết checklist Training",
+          "caption": "Chi tiết checklist với nhóm tiêu chí, câu hỏi và cấu hình chấm điểm."
+        }
+      ]
+    },
+    {
+      "id": "training-checklist-lifecycle",
+      "title": "14.3. Cấu hình, phiên bản và phát hành checklist",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền quản lý checklist."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiểm soát phiên bản checklist và chọn đúng phiên bản cho kế hoạch Training."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Checklist đã được tạo và kiểm tra nội dung.",
+            "Người dùng có quyền thay đổi trạng thái checklist."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở checklist cần sử dụng.",
+            "Kiểm tra tên, loại bài, câu hỏi và cách tính điểm.",
+            "Lưu phiên bản hoàn chỉnh.",
+            "Chuyển checklist sang trạng thái có thể sử dụng.",
+            "Tạo kế hoạch thử và kiểm tra checklist xuất hiện trong danh sách chọn."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Checklist có trạng thái rõ ràng và có thể được chọn khi tạo kế hoạch.",
+            "Kế hoạch mới sử dụng đúng phiên bản checklist đã phát hành."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Khi cần thay đổi lớn, nên tạo phiên bản mới để bảo toàn lịch sử.",
+            "Không thay đổi checklist của bài chấm đang được thực hiện."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-chk-03-checklist-lifecycle-live.png",
+          "alt": "Toàn màn hình quản lý trạng thái checklist Training",
+          "caption": "Màn hình theo dõi phiên bản và trạng thái áp dụng của checklist Training."
+        }
+      ]
+    },
+    {
+      "id": "training-plans-assignment",
+      "title": "15. Kế hoạch chấm Training",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền lập kế hoạch."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Lập lịch, chọn cửa hàng, chọn checklist và phân công đúng người thực hiện bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tạo hoặc nhân bản kế hoạch.",
+            "Thiết lập thời gian, loại bài và checklist.",
+            "Chọn cửa hàng và người thực hiện.",
+            "Phát hành và theo dõi tiến độ kế hoạch."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "15.1. Danh sách, tạo và nhân bản kế hoạch",
+            "15.2. Cấu hình cửa hàng và người thực hiện",
+            "15.3. Phát hành, theo dõi và đóng kế hoạch"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Chỉ phát hành sau khi kiểm tra đầy đủ thời gian, cửa hàng, checklist và người thực hiện.",
+            "Việc phân công AM phải đáp ứng đồng thời hai điều kiện được nêu tại mục 15.2."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-create-plan",
+      "title": "15.1. Danh sách, tạo và nhân bản kế hoạch",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền lập kế hoạch."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tạo kế hoạch mới hoặc dùng kế hoạch cũ làm mẫu để tiết kiệm thời gian thiết lập."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Checklist phù hợp đã được phát hành.",
+            "Đã xác định thời gian và mục tiêu của đợt chấm."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Kế hoạch chấm.",
+            "Tìm kiếm để kiểm tra kế hoạch hiện có.",
+            "Chọn Tạo mới; hoặc chọn Nhân bản tại kế hoạch phù hợp.",
+            "Nhập tên, thời gian, loại bài chấm và checklist.",
+            "Tiếp tục sang bước chọn cửa hàng và người thực hiện.",
+            "Lưu kế hoạch rồi mở lại để kiểm tra."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kế hoạch xuất hiện trong danh sách với thông tin và trạng thái phù hợp.",
+            "Kế hoạch nhân bản có thể được điều chỉnh trước khi phát hành."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đổi tên và thời gian khi nhân bản để tránh nhầm với kế hoạch cũ.",
+            "Kiểm tra checklist trước khi lưu kế hoạch."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-pln-01-training-plan-shell-crop.png",
+          "alt": "Toàn màn hình danh sách kế hoạch chấm Training",
+          "caption": "Danh sách kế hoạch chấm với thời gian, loại bài, trạng thái và người thực hiện."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-pln-02-plan-detail-opened.png",
+          "alt": "Toàn màn hình chi tiết một kế hoạch chấm Training đã mở",
+          "caption": "Chi tiết kế hoạch hiển thị thông tin kỳ chấm, checklist, cửa hàng, người thực hiện và trạng thái."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/training-plan-duplicate-modal-fullscreen.png",
+          "alt": "Toàn màn hình modal sao chép kế hoạch Training",
+          "caption": "Modal Sao chép cho phép nhập tên kế hoạch mới và chọn checklist trước khi tạo bản sao."
+        }
+      ]
+    },
+    {
+      "id": "training-assign-performer",
+      "title": "15.2. Cấu hình cửa hàng và người thực hiện",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền phân công."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gắn đúng cửa hàng và đúng người chịu trách nhiệm thực hiện từng bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kế hoạch đang ở trạng thái cho phép chỉnh sửa.",
+            "Cửa hàng và tài khoản người thực hiện đã được thiết lập."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở kế hoạch cần cấu hình.",
+            "Chọn cửa hàng áp dụng.",
+            "Chọn Taskforce hoặc người thực hiện được phép.",
+            "Nếu chọn AM, kiểm tra AM được TnD phân công đích danh và cửa hàng thuộc phạm vi AM quản lý.",
+            "Kiểm tra thời hạn của từng bài.",
+            "Lưu và rà soát lại toàn bộ danh sách phân công."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Mỗi cửa hàng có người thực hiện và thời hạn rõ ràng.",
+            "Người được giao nhìn thấy bài trong Lịch chấm của tôi sau khi kế hoạch được phát hành."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "AM chỉ có thể thực hiện khi đồng thời đáp ứng đủ hai điều kiện phân công và phạm vi cửa hàng.",
+            "Không phân công một tài khoản đã ngừng hoạt động."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-pln-03-assignment-overview.png",
+          "alt": "Toàn màn hình phân công người thực hiện theo cửa hàng",
+          "caption": "Chi tiết kế hoạch hiển thị cửa hàng, người chấm, vai trò và trạng thái thực hiện."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-pln-04-assignment-store-rows.png",
+          "alt": "Toàn màn hình danh sách cửa hàng và người chấm",
+          "caption": "Danh sách cửa hàng có dữ liệu AM, Taskforce và các dòng đang chờ chọn người chấm."
+        }
+      ]
+    },
+    {
+      "id": "training-plan-lifecycle",
+      "title": "15.3. Phát hành, theo dõi và đóng kế hoạch",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager và người có quyền quản lý kế hoạch."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Đưa kế hoạch vào thực hiện, theo dõi tiến độ và kết thúc đúng thời điểm."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kế hoạch đã có checklist, cửa hàng, người thực hiện và thời gian hợp lệ.",
+            "Thông tin phân công đã được rà soát."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở chi tiết kế hoạch.",
+            "Kiểm tra lần cuối các thông tin.",
+            "Chọn Phát hành.",
+            "Theo dõi số bài chưa thực hiện, đang thực hiện và đã hoàn thành.",
+            "Nhắc người thực hiện khi gần đến hạn.",
+            "Đóng kế hoạch khi các công việc đã hoàn tất theo quy định."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người được giao nhận được bài trong danh sách công việc.",
+            "Trạng thái kế hoạch thay đổi theo tiến độ các bài chấm."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Hạn chế thay đổi kế hoạch sau khi đã có người bắt đầu bài chấm.",
+            "Kiểm tra các bài còn dang dở trước khi đóng kế hoạch."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-pln-05-plan-lifecycle-live.png",
+          "alt": "Toàn màn hình theo dõi trạng thái kế hoạch Training",
+          "caption": "Danh sách kế hoạch Training theo từng trạng thái xử lý."
+        }
+      ]
+    },
+    {
+      "id": "training-execution",
+      "title": "16. Thực hiện bài chấm Training",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM được phân công thực hiện bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hướng dẫn mở bài được giao, trả lời checklist, lưu tiến độ và nộp bài Store Visit hoặc Camera Check."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Lịch chấm của tôi.",
+            "Chọn đúng bài theo cửa hàng, thời gian và loại bài.",
+            "Trả lời đầy đủ checklist và bổ sung ảnh khi được yêu cầu.",
+            "Kiểm tra lại rồi nộp bài."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "16.1. Lịch chấm của tôi và mở bài được giao",
+            "16.2. Thực hiện Store Visit",
+            "16.3. Thực hiện Camera Check",
+            "16.4. Trả lời, lưu nháp và ảnh kèm theo",
+            "16.5. Nộp bài và khóa chỉnh sửa"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "AM chỉ thực hiện bài khi được TnD phân công đích danh và cửa hàng thuộc phạm vi AM quản lý.",
+            "Sau khi nộp, bài chấm chuyển sang giai đoạn xem kết quả và xác nhận điểm."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-assigned-schedule",
+      "title": "16.1. Lịch chấm của tôi và mở bài được giao",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM được phân công."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tìm đúng bài chấm, kiểm tra thời hạn và bắt đầu thực hiện."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kế hoạch đã được phát hành.",
+            "Người dùng đã được gán vào bài chấm."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Lịch chấm của tôi hoặc Thực hiện bài chấm.",
+            "Chọn khoảng thời gian và trạng thái.",
+            "Đối chiếu cửa hàng, loại bài, checklist và thời hạn.",
+            "Chọn bài cần thực hiện.",
+            "Kiểm tra thông tin đầu bài rồi bấm Bắt đầu hoặc Tiếp tục."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài chấm mở đúng cửa hàng và checklist được giao.",
+            "Trạng thái bài thể hiện đúng tiến độ hiện tại."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nếu không thấy bài, xóa bộ lọc và kiểm tra lại thời gian.",
+            "AM cần kiểm tra đủ điều kiện phân công và phạm vi cửa hàng."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-01-assigned-schedule-list.png",
+          "alt": "Toàn màn hình danh sách bài Training được phân công",
+          "caption": "Lịch chấm hiển thị các bài được giao cùng cửa hàng, địa chỉ, kế hoạch, loại bài, kỳ chấm và trạng thái."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-02-taskforce-execution-limitation.png",
+          "alt": "Toàn màn hình danh sách bài chấm của Taskforce",
+          "caption": "Danh sách bài chấm giúp Taskforce mở đúng bài theo thời gian và cửa hàng được giao."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-03-am-execution-statuses.png",
+          "alt": "Toàn màn hình lịch chấm Training của AM",
+          "caption": "Lịch chấm của AM hiển thị bài được giao tại các cửa hàng thuộc phạm vi quản lý."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-04-am-execution-workflow-states.png",
+          "alt": "Toàn màn hình trạng thái bài chấm Training của AM",
+          "caption": "Danh sách bài chấm của AM theo trạng thái chưa thực hiện, đang thực hiện và đã hoàn thành."
+        }
+      ]
+    },
+    {
+      "id": "training-store-visit-execution",
+      "title": "16.2. Thực hiện Store Visit",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM được phân công bài Store Visit."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ghi nhận kết quả quan sát trực tiếp tại cửa hàng theo checklist được giao."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã có mặt tại đúng cửa hàng và trong thời gian thực hiện.",
+            "Bài Store Visit đã được mở từ Lịch chấm của tôi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Kiểm tra tên cửa hàng và checklist.",
+            "Thực hiện lần lượt từng nhóm tiêu chí.",
+            "Chọn câu trả lời đúng với tình trạng quan sát.",
+            "Nhập ghi chú và bổ sung ảnh khi câu hỏi yêu cầu.",
+            "Lưu nháp trong quá trình thực hiện.",
+            "Rà soát các câu chưa hoàn thành trước khi nộp."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Các câu trả lời và ảnh kèm theo được lưu vào đúng bài.",
+            "Bài đủ thông tin để chuyển sang bước nộp."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không dùng ảnh của cửa hàng hoặc thời điểm khác.",
+            "Ghi chú ngắn gọn, rõ nội dung cần cải thiện."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-07-store-visit-in-progress.png",
+          "alt": "Toàn màn hình bài Store Visit đang thực hiện",
+          "caption": "Bài Store Visit đang thực hiện hiển thị dữ liệu tiêu chí và các nút trả lời đang hoạt động."
+        }
+      ]
+    },
+    {
+      "id": "training-camera-check-execution",
+      "title": "16.3. Thực hiện Camera Check",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM được phân công bài Camera Check."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Đánh giá cửa hàng qua nguồn hình ảnh camera theo checklist được giao."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài Camera Check đã được mở.",
+            "Người thực hiện có quyền truy cập nguồn camera theo quy định."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Kiểm tra cửa hàng, khung giờ và checklist.",
+            "Mở nguồn camera tương ứng.",
+            "Quan sát đúng thời điểm và khu vực theo từng câu hỏi.",
+            "Chọn câu trả lời, nhập ghi chú và bổ sung ảnh khi cần.",
+            "Lưu nháp sau từng nhóm tiêu chí.",
+            "Kiểm tra lại toàn bộ bài trước khi nộp."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kết quả Camera Check được ghi nhận theo đúng cửa hàng và thời điểm.",
+            "Bài có đủ thông tin cần thiết để xem xét kết quả."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không đánh giá khi hình ảnh không đủ rõ; ghi chú tình trạng để được hướng dẫn.",
+            "Tuân thủ quy định sử dụng hệ thống camera của công ty."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-08-camera-check-review.png",
+          "alt": "Toàn màn hình bài Camera Check đã hoàn thành",
+          "caption": "Bài Camera Check hiển thị dữ liệu chấm, điểm số và trạng thái sau khi hoàn thành."
+        }
+      ]
+    },
+    {
+      "id": "training-answer-draft-evidence",
+      "title": "16.4. Trả lời, lưu nháp và ảnh kèm theo",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM đang thực hiện bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Giữ lại tiến độ bài chấm và cung cấp thông tin đầy đủ cho từng câu trả lời."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài chấm đang trong thời gian thực hiện.",
+            "Người dùng có quyền chỉnh sửa bài."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Trả lời lần lượt các câu hỏi.",
+            "Nhập ghi chú cho câu có vấn đề hoặc cần giải thích.",
+            "Tải ảnh kèm theo tại câu hỏi yêu cầu.",
+            "Bấm Lưu nháp sau mỗi nhóm nội dung.",
+            "Mở lại bài và kiểm tra các câu đã lưu.",
+            "Hoàn thành các câu còn thiếu."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Nội dung đã lưu vẫn hiển thị khi người dùng mở lại bài.",
+            "Hệ thống nhận biết các câu còn thiếu trước khi nộp."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kiểm tra chất lượng ảnh trước khi tải lên.",
+            "Lưu nháp không phải là nộp bài; cần hoàn tất bước 16.5."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-05-answer-note-evidence.png",
+          "alt": "Toàn màn hình vùng trả lời, ghi chú và ảnh kèm theo",
+          "caption": "Vùng thao tác của câu Không đạt cho phép nhập ghi chú và thêm ảnh kèm theo trước khi lưu hoặc nộp bài."
+        }
+      ]
+    },
+    {
+      "id": "training-submit-lock",
+      "title": "16.5. Nộp bài và khóa chỉnh sửa",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Taskforce và AM đã hoàn thành bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gửi kết quả cuối cùng để hệ thống tính điểm và chuyển bài sang bước xác nhận."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Tất cả câu bắt buộc đã được trả lời.",
+            "Ghi chú và ảnh cần thiết đã được bổ sung."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở phần tổng kết bài chấm.",
+            "Kiểm tra các cảnh báo hoặc câu còn thiếu.",
+            "Rà soát câu trả lời, ghi chú và ảnh.",
+            "Bấm Nộp bài.",
+            "Xác nhận thao tác khi hệ thống yêu cầu.",
+            "Kiểm tra trạng thái bài sau khi nộp."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài chuyển sang trạng thái đã nộp hoặc chờ xác nhận.",
+            "Kết quả xuất hiện trong danh sách Kết quả Training."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Chỉ nộp khi đã kiểm tra đầy đủ vì bài có thể không còn cho phép chỉnh sửa trực tiếp.",
+            "Nếu phát hiện sai sau khi nộp, liên hệ người có quyền xử lý kết quả."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-exe-06-submit-confirmation-modal.png",
+          "alt": "Toàn màn hình modal xác nhận nộp bài Training",
+          "caption": "Modal Nộp bài hiển thị điểm tạm tính và cảnh báo bài sẽ chuyển cho Store Manager xác nhận, sau đó không thể chỉnh sửa."
+        }
+      ]
+    },
+    {
+      "id": "training-results-confirmation",
+      "title": "17. Kết quả bài chấm và xác nhận điểm",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager, COO, OM, AM, SM và người được cấp quyền xem kết quả."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tra cứu điểm, xem chi tiết câu trả lời và hoàn tất xác nhận kết quả Training."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở danh sách Kết quả Training.",
+            "Lọc theo thời gian, cửa hàng, loại bài hoặc trạng thái.",
+            "Mở chi tiết để kiểm tra điểm và lỗi.",
+            "SM xác nhận trong 48 giờ hoặc hệ thống tự xác nhận khi hết thời hạn."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "17.1. Danh sách kết quả",
+            "17.2. Chi tiết kết quả",
+            "17.3. Xem lại và chỉnh sửa kết quả",
+            "17.4. SM xác nhận và hệ thống tự xác nhận sau 48 giờ"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Training áp dụng thời hạn 48 giờ; QA/QC áp dụng 120 giờ.",
+            "Kết quả đã xác nhận là căn cứ theo dõi Action Plan."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-result-list",
+      "title": "17.1. Danh sách kết quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager, COO, OM, AM và SM theo phạm vi được phân công."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tìm nhanh bài chấm theo cửa hàng, người thực hiện, thời gian và trạng thái xác nhận."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã có bài chấm được nộp.",
+            "Người dùng có quyền xem kết quả."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Kết quả.",
+            "Chọn khoảng thời gian.",
+            "Chọn thêm cửa hàng, loại bài, người thực hiện hoặc trạng thái khi cần.",
+            "Áp dụng bộ lọc.",
+            "Kiểm tra điểm và trạng thái trong danh sách.",
+            "Chọn một dòng để mở chi tiết."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Danh sách hiển thị các kết quả thuộc phạm vi người dùng.",
+            "Bộ lọc giúp thu hẹp đúng nhóm bài cần theo dõi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "SM chỉ nhìn thấy kết quả cửa hàng phụ trách.",
+            "Đặt lại bộ lọc nếu danh sách không có dữ liệu như mong đợi."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-res-01-result-review-shell-crop.png",
+          "alt": "Toàn màn hình danh sách kết quả Training",
+          "caption": "Danh sách kết quả Training với bộ lọc, điểm số và trạng thái xác nhận."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-res-05-tnd-result-list.png",
+          "alt": "Toàn màn hình kết quả Training của TnD Manager",
+          "caption": "TnD Manager theo dõi kết quả bài chấm theo kế hoạch, cửa hàng và người thực hiện."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-res-06-sm-result-list.png",
+          "alt": "Toàn màn hình kết quả Training của SM",
+          "caption": "SM theo dõi kết quả và trạng thái xác nhận của cửa hàng đang phụ trách."
+        }
+      ]
+    },
+    {
+      "id": "training-result-detail",
+      "title": "17.2. Chi tiết kết quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Người dùng có quyền xem kết quả Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Xem điểm tổng, nội dung từng câu trả lời, lỗi, ghi chú và ảnh kèm theo của bài chấm."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã chọn một bài từ danh sách Kết quả.",
+            "Bài thuộc phạm vi được phép xem."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở bài từ danh sách Kết quả.",
+            "Kiểm tra thông tin kế hoạch, cửa hàng, người thực hiện và thời gian.",
+            "Xem điểm tổng và trạng thái xác nhận.",
+            "Mở từng nhóm tiêu chí.",
+            "Đọc câu trả lời, điểm, ghi chú và ảnh kèm theo.",
+            "Chuyển sang Action Plan nếu có lỗi cần khắc phục."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người dùng nắm được cách hình thành điểm và các nội dung chưa đạt.",
+            "Lỗi cần xử lý có thể được theo dõi tại Action Plan."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đối chiếu đúng loại bài và checklist trước khi đánh giá kết quả.",
+            "Không chỉ dựa vào điểm tổng; cần xem chi tiết các lỗi quan trọng."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/training-result-detail-fullscreen.png",
+          "alt": "Toàn màn hình chi tiết kết quả bài chấm Training",
+          "caption": "Chi tiết kết quả hiển thị thông tin bài chấm, người thực hiện, thời gian nộp/xác nhận, điểm, câu Không đạt và trạng thái Action Plan."
+        }
+      ]
+    },
+    {
+      "id": "training-result-edit",
+      "title": "17.3. Xem lại và chỉnh sửa kết quả",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "TnD Manager hoặc người được cấp quyền xử lý kết quả."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Điều chỉnh thông tin kết quả khi phát hiện sai sót và hệ thống vẫn cho phép chỉnh sửa."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài thuộc trạng thái cho phép chỉnh sửa.",
+            "Người dùng có quyền xử lý kết quả và có lý do điều chỉnh rõ ràng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở chi tiết kết quả.",
+            "Kiểm tra trạng thái xác nhận.",
+            "Chọn Chỉnh sửa nếu nút này được hiển thị.",
+            "Cập nhật nội dung cần sửa và ghi rõ lý do.",
+            "Lưu thay đổi.",
+            "Mở lại kết quả để kiểm tra điểm và trạng thái."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kết quả được cập nhật và hiển thị lại theo nội dung đã lưu.",
+            "Thông tin sau điều chỉnh được dùng cho bước xác nhận tiếp theo."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không chỉnh sửa kết quả đã xác nhận nếu hệ thống không cho phép.",
+            "Mọi điều chỉnh cần tuân theo quy trình phê duyệt của đơn vị."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-res-03-result-waiting-list.png",
+          "alt": "Toàn màn hình danh sách kết quả đang chờ xác nhận",
+          "caption": "Danh sách kết quả giúp TnD Manager mở bài đang chờ xác nhận để xem lại hoặc chỉnh sửa khi đủ điều kiện."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/training-result-edit-detail-fullscreen.png",
+          "alt": "Toàn màn hình chế độ chỉnh sửa bài Training đã nộp",
+          "caption": "Chế độ chỉnh sửa bài đã nộp của TnD Manager; điểm tính lại khi lưu và bài khóa sau SM xác nhận hoặc Action Plan được tạo."
+        }
+      ]
+    },
+    {
+      "id": "training-score-confirm-48h",
+      "title": "17.4. SM xác nhận và hệ thống tự xác nhận sau 48 giờ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "SM và các cấp quản lý theo dõi kết quả."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoàn tất xác nhận điểm Training trong thời hạn quy định."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Bài đã được nộp và đang chờ xác nhận.",
+            "SM đang phụ trách cửa hàng của bài chấm."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "SM mở Training > Kết quả.",
+            "Lọc trạng thái chờ xác nhận.",
+            "Mở chi tiết và kiểm tra điểm, lỗi, ghi chú, ảnh kèm theo.",
+            "Bấm Xác nhận khi đồng ý với kết quả.",
+            "Kiểm tra trạng thái đã xác nhận.",
+            "Nếu SM không thao tác, hệ thống tự xác nhận sau 48 giờ theo quy định."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kết quả chuyển sang đã xác nhận khi SM hoàn tất thao tác.",
+            "Kết quả chưa được SM xử lý sẽ được hệ thống tự xác nhận sau 48 giờ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Mốc 48 giờ chỉ áp dụng cho Training.",
+            "QA/QC vẫn áp dụng mốc 120 giờ."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/training-result-confirm-score-modal-fullscreen.png",
+          "alt": "Toàn màn hình modal xác nhận điểm của Store Manager",
+          "caption": "Modal xác nhận điểm của SM hiển thị trạng thái Chờ xác nhận, thời gian tự xác nhận còn lại và thông báo tạo Action Plan từ câu Không đạt."
+        }
+      ]
+    },
+    {
+      "id": "training-action-plan",
+      "title": "18. Action Plan Training",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "SM, AM, OM, COO, TnD Manager và người được cấp quyền."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Theo dõi lỗi cần khắc phục, người phụ trách, thời hạn và tiến độ hoàn thành sau bài chấm Training."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Tạo Action Plan từ lỗi cần khắc phục.",
+            "Theo dõi danh sách và mở chi tiết.",
+            "Cập nhật nguyên nhân, hành động, ảnh và trạng thái.",
+            "Đóng Action Plan khi đã đáp ứng yêu cầu."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "18.1. Tạo Action Plan từ lỗi",
+            "18.2. Danh sách và chi tiết Action Plan",
+            "18.3. Cập nhật khắc phục và trạng thái"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Action Plan phải liên kết đúng lỗi và đúng cửa hàng.",
+            "SM chịu trách nhiệm cập nhật nội dung của cửa hàng; cấp quản lý theo dõi theo phạm vi được phân công."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-action-plan-create",
+      "title": "18.1. Tạo Action Plan từ lỗi",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Người được cấp quyền tạo Action Plan Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Chuyển một lỗi cần xử lý thành công việc khắc phục có người phụ trách và thời hạn rõ ràng."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kết quả bài chấm đã có lỗi cần khắc phục.",
+            "Người dùng có quyền tạo Action Plan."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở chi tiết kết quả Training.",
+            "Chọn lỗi cần khắc phục.",
+            "Chọn Tạo Action Plan.",
+            "Nhập nội dung cần xử lý, người phụ trách và hạn hoàn thành.",
+            "Bổ sung ghi chú hoặc ảnh ban đầu khi cần.",
+            "Lưu và mở Action Plan vừa tạo để kiểm tra."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Action Plan được liên kết với đúng lỗi và cửa hàng.",
+            "Bản ghi xuất hiện trong danh sách Action Plan của người có liên quan."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không tạo nhiều Action Plan trùng nhau cho cùng một lỗi.",
+            "Hạn hoàn thành cần phù hợp với mức độ ảnh hưởng của lỗi."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-action-plan-list-detail",
+      "title": "18.2. Danh sách và chi tiết Action Plan",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "SM, AM, OM, COO và TnD Manager theo phạm vi được phân công."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tra cứu công việc khắc phục và xem đầy đủ thông tin của từng Action Plan."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Action Plan đã được tạo.",
+            "Người dùng có quyền xem bản ghi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Training > Action Plan.",
+            "Chọn trạng thái, thời gian, cửa hàng hoặc người phụ trách khi cần.",
+            "Kiểm tra các cột lỗi, thời hạn và trạng thái.",
+            "Chọn một dòng để mở chi tiết.",
+            "Đọc lỗi gốc, nguyên nhân, hành động, ảnh và lịch sử cập nhật.",
+            "Quay lại danh sách để tiếp tục theo dõi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Danh sách hiển thị Action Plan thuộc phạm vi người dùng.",
+            "Chi tiết cung cấp đủ thông tin để theo dõi tiến độ khắc phục."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Ưu tiên xử lý bản ghi quá hạn hoặc có mức độ ảnh hưởng cao.",
+            "Kiểm tra đúng cửa hàng trước khi cập nhật."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-ap-02-am-action-plan-list.png",
+          "alt": "Toàn màn hình Action Plan Training của AM",
+          "caption": "AM theo dõi Action Plan của các cửa hàng được phân công quản lý."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-ap-03-coo-action-plan-list.png",
+          "alt": "Toàn màn hình Action Plan Training của COO",
+          "caption": "COO theo dõi tình hình khắc phục Action Plan trong toàn công ty."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-ap-04-om-action-plan-statuses.png",
+          "alt": "Toàn màn hình Action Plan Training của OM",
+          "caption": "OM theo dõi Action Plan theo khu vực và trạng thái xử lý."
+        },
+        {
+          "type": "image",
+          "src": "/assets/user-guide/2026-07-training-phase-2-full/p2-ap-05-sm-action-plan-statuses.png",
+          "alt": "Toàn màn hình Action Plan Training của SM",
+          "caption": "SM theo dõi và cập nhật Action Plan của cửa hàng đang phụ trách."
+        }
+      ]
+    },
+    {
+      "id": "training-action-plan-update",
+      "title": "18.3. Cập nhật khắc phục và trạng thái",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "SM phụ trách cửa hàng; AM, OM, COO và TnD Manager theo dõi theo quyền."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ghi nhận nguyên nhân, hành động khắc phục, ảnh hoàn thành và trạng thái xử lý."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Action Plan thuộc cửa hàng được phép thao tác.",
+            "Người dùng có quyền cập nhật bản ghi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở Action Plan cần xử lý.",
+            "Đọc lỗi gốc và yêu cầu khắc phục.",
+            "Nhập nguyên nhân và hành động thực hiện.",
+            "Cập nhật người phụ trách, thời hạn và ảnh hoàn thành khi cần.",
+            "Chọn trạng thái phù hợp.",
+            "Lưu rồi mở lại để kiểm tra thông tin."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Action Plan hiển thị nội dung và trạng thái mới nhất.",
+            "Cấp quản lý có thể theo dõi tiến độ xử lý theo phạm vi."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Chỉ chuyển hoàn thành khi việc khắc phục đã đáp ứng yêu cầu.",
+            "Nếu quá hạn, cập nhật nguyên nhân và kế hoạch xử lý tiếp theo."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-report-export-notification",
+      "title": "19. Báo cáo, xuất dữ liệu và thông báo",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Người dùng Training có quyền xem danh sách, báo cáo hoặc thông báo."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hướng dẫn lọc dữ liệu, xuất file và xử lý các thông báo liên quan đến Training."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn đúng màn hình và điều kiện lọc.",
+            "Kiểm tra kết quả trước khi xuất file.",
+            "Mở trung tâm thông báo và nhận biết thông báo Training.",
+            "Đi đến bản ghi liên quan để xử lý."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "19.1. Bộ lọc và xuất dữ liệu",
+            "19.2. Thông báo Training"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Dữ liệu xuất ra tuân theo phạm vi của tài khoản.",
+            "Kiểm tra tên phân hệ trước khi xử lý thông báo."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-filter-export",
+      "title": "19.1. Bộ lọc và xuất dữ liệu",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Người dùng có quyền xem danh sách hoặc báo cáo Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tìm đúng dữ liệu cần theo dõi và tải file phục vụ tổng hợp công việc."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã vào đúng màn hình Training.",
+            "Đã xác định khoảng thời gian và điều kiện cần tra cứu."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Chọn khoảng thời gian.",
+            "Chọn thêm loại bài, trạng thái, đơn vị hoặc cửa hàng khi cần.",
+            "Áp dụng bộ lọc và kiểm tra số liệu hiển thị.",
+            "Bấm Xuất dữ liệu nếu nút này được cung cấp cho tài khoản.",
+            "Mở file đã tải.",
+            "Đối chiếu file với điều kiện lọc trên màn hình."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Danh sách trên màn hình được cập nhật theo bộ lọc.",
+            "File xuất ra phản ánh điều kiện lọc và phạm vi dữ liệu của người dùng."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đặt lại bộ lọc trước khi thực hiện một lần tra cứu mới.",
+            "Kiểm tra thời gian và trạng thái trong file trước khi sử dụng số liệu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-notification-limitations",
+      "title": "19.2. Thông báo Training",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tất cả người dùng Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nhận biết công việc mới hoặc trạng thái cần xử lý và mở đúng bản ghi liên quan."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người dùng đã đăng nhập.",
+            "Tài khoản có quyền xem trung tâm thông báo."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Mở biểu tượng Thông báo.",
+            "Tìm thông báo có nội dung liên quan đến Training.",
+            "Đọc loại sự kiện, thời điểm và trạng thái.",
+            "Chọn thông báo để mở bản ghi liên quan.",
+            "Thực hiện công việc được yêu cầu.",
+            "Đánh dấu đã đọc nếu hệ thống cung cấp chức năng này."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người dùng đi đến đúng bài chấm, kết quả hoặc Action Plan cần xử lý.",
+            "Thông báo đã đọc được phân biệt với thông báo mới."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Kiểm tra phân hệ Training trước khi thao tác.",
+            "Đối với kết quả chờ SM xác nhận, thời hạn xử lý là 48 giờ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-faq",
+      "title": "20. Câu hỏi thường gặp và xử lý sự cố Training",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tất cả người dùng Training và bộ phận hỗ trợ."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Giúp người dùng tự kiểm tra các tình huống phổ biến và cung cấp đủ thông tin khi cần hỗ trợ."
+        },
+        {
+          "type": "label",
+          "text": "Quy trình tổng quát"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Xác định đúng màn hình và công việc gặp vấn đề.",
+            "Kiểm tra tài khoản, phân quyền, bộ lọc và trạng thái bản ghi.",
+            "Thử lại theo hướng dẫn ở mục 20.1.",
+            "Gửi yêu cầu hỗ trợ theo mẫu ở mục 20.2 nếu vấn đề vẫn còn."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Nội dung trong chương"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "20.1. Câu hỏi thường gặp",
+            "20.2. Xử lý sự cố và báo hỗ trợ"
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không dùng tài khoản của người khác để xử lý sự cố.",
+            "Ghi rõ thời điểm và các bước đã thực hiện để được hỗ trợ nhanh hơn."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-faq-common",
+      "title": "20.1. Câu hỏi thường gặp",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tất cả người dùng Training."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Xử lý nhanh các trường hợp không thấy menu, không thấy bài, không thấy dữ liệu hoặc không thể thao tác."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người dùng biết tài khoản và vai trò đang sử dụng.",
+            "Có thể xác định màn hình gặp vấn đề."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Không thấy Training: đăng xuất, đăng nhập lại và kiểm tra quyền tài khoản.",
+            "Không thấy bài được giao: xóa bộ lọc, kiểm tra thời gian và xác nhận kế hoạch đã phát hành.",
+            "AM không thấy bài: kiểm tra cả phân công của TnD và phạm vi cửa hàng quản lý.",
+            "Không thấy dữ liệu: kiểm tra khoảng thời gian, trạng thái và cửa hàng.",
+            "Không chỉnh sửa được: kiểm tra trạng thái bài hoặc kết quả đã xác nhận chưa.",
+            "Nhầm thời hạn xác nhận: Training là 48 giờ, QA/QC là 120 giờ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Người dùng xác định được nguyên nhân phổ biến và tiếp tục công việc.",
+            "Nếu chưa xử lý được, có đủ thông tin để gửi yêu cầu hỗ trợ."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Taskforce thường bắt đầu từ Lịch chấm của tôi hoặc Thực hiện bài chấm.",
+            "Không tự thay đổi phân quyền tài khoản."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training-troubleshooting-report",
+      "title": "20.2. Xử lý sự cố và báo hỗ trợ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "label",
+          "text": "Dành cho"
+        },
+        {
+          "type": "paragraph",
+          "text": "Người dùng Training và bộ phận tiếp nhận hỗ trợ."
+        },
+        {
+          "type": "label",
+          "text": "Mục đích"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mô tả sự cố rõ ràng để bộ phận hỗ trợ có thể kiểm tra nhanh và chính xác."
+        },
+        {
+          "type": "label",
+          "text": "Điều kiện thực hiện"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Đã thực hiện các bước kiểm tra tại mục 20.1.",
+            "Vấn đề vẫn xảy ra trên đúng tài khoản và màn hình."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Cách thao tác"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Ghi vai trò, phân hệ, tên màn hình và thời điểm xảy ra.",
+            "Liệt kê ngắn gọn từng bước đã thao tác.",
+            "Mô tả kết quả mong đợi và kết quả đang hiển thị.",
+            "Chụp toàn màn hình có thanh địa chỉ, menu, bộ lọc và thông báo lỗi nếu có.",
+            "Ghi trạng thái của kế hoạch, bài chấm, kết quả hoặc Action Plan liên quan.",
+            "Gửi thông tin qua kênh hỗ trợ được quy định."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Kết quả"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Yêu cầu hỗ trợ có đủ thông tin để xác định màn hình, tài khoản, thời điểm và cách tái hiện.",
+            "Bộ phận hỗ trợ có thể phản hồi đúng nhóm chức năng gặp vấn đề."
+          ]
+        },
+        {
+          "type": "label",
+          "text": "Lưu ý nghiệp vụ"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Không gửi mật khẩu hoặc mã đăng nhập trong yêu cầu hỗ trợ.",
+            "Không lặp lại thao tác nhiều lần nếu có nguy cơ tạo bản ghi trùng."
+          ]
+        }
+      ]
     }
   ]
 }
-

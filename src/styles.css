@@ -617,3 +617,223 @@ tr:last-child td {
     min-width: 560px;
   }
 }
+
+/* Parent-child navigation for QA/QC and Training guide phases */
+.toc-phase-list {
+  display: grid;
+  gap: 9px;
+}
+
+.toc-phase-group {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.toc-phase-group.expanded {
+  border-color: #dfc280;
+  box-shadow: 0 7px 18px rgba(139, 98, 23, 0.08);
+}
+
+.toc-phase-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 0;
+  background: #f7f8fb;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.toc-phase-button:hover,
+.toc-phase-button.active {
+  background: #fbf3e4;
+  color: #684812;
+}
+
+.toc-phase-button:focus-visible,
+.toc-link:focus-visible,
+.mobile-phase-button:focus-visible,
+.mobile-toc-link:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: -2px;
+}
+
+.toc-phase-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.toc-phase-copy > span {
+  font-size: 14px;
+  font-weight: 760;
+}
+
+.toc-phase-copy small {
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 620;
+}
+
+.toc-phase-children {
+  display: grid;
+  gap: 3px;
+  padding: 7px 5px 9px;
+  border-top: 1px solid #ead9b2;
+}
+
+.toc-group + .toc-group {
+  padding-top: 3px;
+  border-top: 1px solid rgba(217, 225, 234, 0.72);
+}
+
+.toc-phase-children .toc-link.level-1 {
+  padding-left: 12px;
+}
+
+.mobile-phase-group {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.mobile-phase-group.expanded {
+  border-color: #dfc280;
+}
+
+.mobile-phase-button,
+.mobile-toc-link {
+  display: flex;
+  width: 100%;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.mobile-phase-button {
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px 12px;
+  background: var(--surface-soft);
+}
+
+.mobile-phase-button.active {
+  background: #fbf3e4;
+  color: #684812;
+}
+
+.mobile-phase-button > span {
+  display: grid;
+  gap: 3px;
+}
+
+.mobile-phase-button small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mobile-phase-children {
+  display: grid;
+  gap: 5px;
+  max-height: calc(100vh - 210px);
+  overflow: auto;
+  padding: 8px;
+  border-top: 1px solid #ead9b2;
+  background: #fff;
+}
+
+.mobile-chapter-group {
+  display: grid;
+  gap: 3px;
+}
+
+.mobile-chapter-group + .mobile-chapter-group {
+  padding-top: 5px;
+  border-top: 1px solid var(--line);
+}
+
+.mobile-toc-link {
+  padding: 11px 12px;
+  border-radius: 8px;
+  background: transparent;
+  line-height: 1.42;
+}
+
+.mobile-toc-link.level-1 {
+  font-weight: 750;
+}
+
+.mobile-toc-link.level-2 {
+  padding: 8px 12px 8px 24px;
+  color: #485365;
+  font-size: 13px;
+}
+
+.mobile-toc-link.active {
+  background: #fbf6ec;
+  color: #775416;
+  box-shadow: inset 3px 0 0 var(--brand-gold);
+}
+/* Accordion phase rows: label navigates, chevron only expands/collapses. */
+.toc-phase-header,
+.mobile-phase-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  align-items: stretch;
+  background: var(--surface-soft);
+}
+
+.toc-phase-select {
+  min-width: 0;
+  justify-content: flex-start;
+  border-radius: 0;
+}
+
+.toc-phase-toggle,
+.mobile-phase-toggle {
+  display: grid;
+  width: 42px;
+  min-height: 42px;
+  place-items: center;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--ink-soft);
+  cursor: pointer;
+  font: inherit;
+}
+
+.toc-phase-toggle:hover,
+.mobile-phase-toggle:hover,
+.toc-phase-group.expanded .toc-phase-toggle,
+.mobile-phase-group.expanded .mobile-phase-toggle {
+  background: #fbf3e4;
+  color: #684812;
+}
+
+.toc-phase-toggle:focus-visible,
+.mobile-phase-toggle:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 3px solid rgba(37, 99, 235, 0.28);
+  outline-offset: -3px;
+}
+
+.mobile-phase-select {
+  min-width: 0;
+  justify-content: flex-start;
+  border-radius: 0;
+}
+
+.mobile-phase-select > span {
+  min-width: 0;
+}

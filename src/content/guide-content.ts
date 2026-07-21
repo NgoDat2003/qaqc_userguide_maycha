@@ -21,7 +21,6 @@ export type GuideContent = {
   scope: string;
   audience: string;
   notice: string;
-  sourceDocument: string;
   imageCount: number;
   sections: GuideSection[];
 };
