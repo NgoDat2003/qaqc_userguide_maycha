@@ -31,12 +31,10 @@ export function GuideHeader({ guide, activePhase, sectionCount, imageCount }: Gu
         <div className="header-actions">
           <Button
             className="download-button"
-            type="primary"
-            href="/downloads/huong-dan-qaqc.docx"
-            download
-            aria-label="Tải hướng dẫn Word"
+            disabled
+            aria-label="Bản Word đang cập nhật"
           >
-            Tải hướng dẫn Word
+            Bản Word đang cập nhật
           </Button>
         </div>
       </div>

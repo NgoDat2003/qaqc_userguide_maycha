@@ -160,6 +160,15 @@ a {
   color: var(--brand-gold-dark);
 }
 
+.download-button.ant-btn[disabled],
+.download-button.ant-btn[disabled]:hover {
+  border-color: var(--line);
+  background: var(--surface-soft);
+  color: var(--muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .guide-shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);

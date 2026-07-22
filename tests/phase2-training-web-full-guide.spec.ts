@@ -5,7 +5,22 @@ import { join } from 'node:path';
 
 const require = createRequire(import.meta.url);
 const guide = require('../src/content/guide-content.json') as {
-  sections: Array<{ blocks: Array<{ type: string }> }>;
+  sections: Array<{
+    id: string;
+    title: string;
+    level: number;
+    blocks: Array<{
+      type: string;
+      text?: string;
+      items?: string[];
+      src?: string;
+      headers?: string[];
+      rows?: string[][];
+    }>;
+  }>;
+};
+const ledger = require('../src/content/phase2-evidence-ledger.json') as {
+  rows: Array<{ evidenceId: string; src: string; assetPath?: string }>;
 };
 
 const BASE_URL = process.env.GUIDE_BASE_URL ?? 'http://127.0.0.1:4173';
@@ -13,6 +28,26 @@ const PHASE2_SECTIONS = guide.sections.slice(50);
 const PHASE2_IMAGES = PHASE2_SECTIONS.flatMap((section) =>
   section.blocks.filter((block) => block.type === 'image'),
 );
+const REMOVED_SECTION_IDS = [
+  'training-dashboard-coo',
+  'training-dashboard-om',
+  'training-scope-boundaries',
+];
+const REMOVED_EVIDENCE_IDS = [
+  'P2-DB-02', 'P2-DB-03', 'P2-DB-04', 'P2-DB-05',
+  'P2-DEP-01', 'P2-DEP-02', 'P2-DEP-04', 'P2-DEP-05', 'P2-DEP-06',
+];
+const REMOVED_EVIDENCE_PATHS = [
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-db-02-tnd-dashboard-tables.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-db-03-coo-company-dashboard.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-db-04-om-dashboard-loaded.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-db-05-om-dashboard-status.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-dep-01-tnd-training-shell.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-dep-02-taskforce-training-shell.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-dep-04-om-training-shell.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-dep-05-am-training-shell.png',
+  '/assets/user-guide/2026-07-training-phase-2-full/p2-dep-06-sm-training-shell.png',
+];
 
 async function assertImages(page: Page) {
   const images = page.locator('.guide-figure img');
@@ -44,6 +79,74 @@ async function assertCurrentTargetVisible(page: Page) {
   expect(box!.y).toBeLessThan(page.viewportSize()!.height);
 }
 
+test('Phase 2 canonical child blocks follow the customer reading order', () => {
+  expect(guide.sections).toHaveLength(87);
+  expect(PHASE2_SECTIONS).toHaveLength(37);
+  expect(PHASE2_IMAGES).toHaveLength(36);
+
+  const dashboardParent = PHASE2_SECTIONS.find((section) => section.id === 'training-role-dashboards');
+  const dashboardContents = dashboardParent?.blocks.find((block) =>
+    block.type === 'bullets' && block.items[0]?.startsWith('13.1.'));
+  expect(dashboardContents?.items).toEqual([
+    '13.1. Dashboard cấp quản lý — TnD Manager, COO và OM',
+    '13.2. Dashboard Taskforce',
+    '13.3. Dashboard AM',
+    '13.4. Dashboard SM',
+  ]);
+
+  const management = PHASE2_SECTIONS.find((section) => section.id === 'training-dashboard-tnd-manager');
+  expect(management?.title).toBe('13.1. Dashboard cấp quản lý — TnD Manager, COO và OM');
+  expect(management?.blocks.filter((block) => block.type === 'image')).toEqual([
+    expect.objectContaining({
+      src: '/assets/user-guide/2026-07-training-phase-2-full/p2-db-01-tnd-dashboard-loaded.png',
+    }),
+  ]);
+  const managementScopeTable = management?.blocks.find((block) => block.type === 'table');
+  expect(managementScopeTable?.headers).toEqual(['Vai trò', 'Phạm vi dữ liệu', 'Quyền sử dụng']);
+  expect(managementScopeTable?.rows).toEqual([
+    ['TnD Manager', 'Toàn bộ dữ liệu Training', 'Quản lý, theo dõi và xuất Excel RSV'],
+    ['COO', 'Toàn công ty', 'Chỉ theo dõi, quan sát'],
+    ['OM', 'Thương hiệu, đơn vị hoặc khu vực được phân công', 'Chỉ theo dõi, quan sát'],
+  ]);
+
+  const phase2Ids = PHASE2_SECTIONS.map((section) => section.id);
+  for (const sectionId of REMOVED_SECTION_IDS) expect(phase2Ids).not.toContain(sectionId);
+  const phase2ImagePaths = PHASE2_IMAGES.map((image) => image.src);
+  const ledgerIds = ledger.rows.map((row) => row.evidenceId);
+  const ledgerPaths = ledger.rows.flatMap((row) => [row.src, row.assetPath]);
+  for (const evidenceId of REMOVED_EVIDENCE_IDS) expect(ledgerIds).not.toContain(evidenceId);
+  for (const evidencePath of REMOVED_EVIDENCE_PATHS) {
+    expect(phase2ImagePaths).not.toContain(evidencePath);
+    expect(ledgerPaths).not.toContain(evidencePath);
+  }
+
+  const taskforce = PHASE2_SECTIONS.find((section) => section.id === 'training-dashboard-taskforce');
+  expect(taskforce?.title).toBe('13.2. Dashboard Taskforce');
+  const am = PHASE2_SECTIONS.find((section) => section.id === 'training-dashboard-am');
+  expect(am?.title).toBe('13.3. Dashboard AM');
+  const sm = PHASE2_SECTIONS.find((section) => section.id === 'training-dashboard-sm');
+  expect(sm?.title).toBe('13.4. Dashboard SM');
+
+  for (const section of PHASE2_SECTIONS.filter((item) => item.level === 2)) {
+    const labelAt = (text: string) => section.blocks.findIndex((block) =>
+      block.type === 'label' && block.text === text);
+    const actionIndex = labelAt('Cách thao tác');
+    const resultIndex = labelAt('Kết quả');
+    const cautionIndex = labelAt('Lưu ý nghiệp vụ');
+    expect(actionIndex, `${section.id}: Cách thao tác`).toBeGreaterThanOrEqual(0);
+    expect(resultIndex, `${section.id}: Kết quả after actions`).toBeGreaterThan(actionIndex);
+    expect(cautionIndex, `${section.id}: Lưu ý after result`).toBeGreaterThan(resultIndex);
+
+    const imageIndexes = section.blocks
+      .map((block, index) => block.type === 'image' ? index : -1)
+      .filter((index) => index >= 0);
+    for (const imageIndex of imageIndexes) {
+      expect(imageIndex, `${section.id}: image after actions`).toBeGreaterThan(actionIndex);
+      expect(imageIndex, `${section.id}: image before result`).toBeLessThan(resultIndex);
+    }
+  }
+});
+
 for (const viewport of [
   { name: 'desktop-1440x900', width: 1440, height: 900, mobile: false },
   { name: 'mobile-390x844', width: 390, height: 844, mobile: true },
@@ -68,26 +171,45 @@ for (const viewport of [
 
     await page.goto(`${BASE_URL}/#phase-2`, { waitUntil: 'networkidle' });
     await expect(page.locator('article#phase-2')).toBeVisible();
-    await expect(page.locator('.guide-section')).toHaveCount(40);
+    await expect(page.locator('.guide-section')).toHaveCount(37);
     await expect(page.locator('.guide-section.level-1')).toHaveCount(9);
-    await expect(page.locator('.guide-section.level-2')).toHaveCount(31);
-    await expect(page.locator('.header-tags')).toContainText('40 mục trong phần');
+    await expect(page.locator('.guide-section.level-2')).toHaveCount(28);
+    await expect(page.locator('.header-tags')).toContainText('37 mục trong phần');
     await expect(page.locator('.header-tags')).toContainText(`${PHASE2_IMAGES.length} ảnh trong phần`);
     await assertImages(page);
+
+    const managementDashboard = page.locator('#training-dashboard-tnd-manager');
+    await expect(managementDashboard.getByRole('heading', {
+      name: '13.1. Dashboard cấp quản lý — TnD Manager, COO và OM',
+    })).toBeVisible();
+    await expect(managementDashboard.locator('.guide-figure img')).toHaveCount(1);
+    await expect(managementDashboard.locator('.guide-figure img')).toHaveAttribute(
+      'src',
+      /p2-db-01-tnd-dashboard-loaded\.png$/,
+    );
+    await expect(managementDashboard).toContainText('cùng nhóm chỉ số');
+    await expect(managementDashboard).toContainText('phạm vi');
+    const managementScopeTable = managementDashboard.locator('table');
+    await expect(managementScopeTable).toContainText('TnD Manager');
+    await expect(managementScopeTable).toContainText('COO');
+    await expect(managementScopeTable).toContainText('OM');
+    await expect(page.locator('#training-dashboard-coo, #training-dashboard-om')).toHaveCount(0);
 
     const bodyText = await page.locator('body').innerText();
     for (const role of ['TnD Manager', 'Taskforce', 'COO', 'OM', 'AM', 'SM']) {
       expect(bodyText).toContain(role);
     }
-    expect(bodyText).toContain('được TnD phân công đích danh');
-    expect(bodyText).toContain('cửa hàng thuộc phạm vi AM quản lý');
+    expect(bodyText).toContain('được TnD Manager phân công');
+    expect(bodyText).toContain('cửa hàng mình quản lý');
     expect(bodyText).toContain('48 giờ');
-    expect(bodyText).toContain('120 giờ');
-    expect(bodyText).toContain('Tải hướng dẫn Word');
+    expect(bodyText).toContain('Bản Word đang cập nhật');
+    const phase2Text = await page.locator('article#phase-2').innerText();
+    expect(phase2Text).not.toMatch(/thông\s+báo|notifications?/i);
 
-    const wordLink = page.locator('a.download-button[href="/downloads/huong-dan-qaqc.docx"]');
-    await expect(wordLink).toBeVisible();
-    await expect(wordLink).toBeEnabled();
+    const wordButton = page.getByRole('button', { name: 'Bản Word đang cập nhật' });
+    await expect(wordButton).toBeVisible();
+    await expect(wordButton).toBeDisabled();
+    await expect(page.locator('.download-button[href], .download-button[download]')).toHaveCount(0);
 
     if (viewport.mobile) {
       await page.locator('.mobile-toc-button').click();
@@ -98,7 +220,7 @@ for (const viewport of [
       await expect(phase2Toggle).toHaveAttribute('aria-expanded', 'false');
       await phase2Toggle.click();
       await expect(drawer.locator('.mobile-toc-link.level-1')).toHaveCount(9);
-      await expect(drawer.locator('.mobile-toc-link.level-2')).toHaveCount(31);
+      await expect(drawer.locator('.mobile-toc-link.level-2')).toHaveCount(28);
       const first = drawer.locator('.mobile-toc-link.level-2').nth(0);
       const firstText = await first.innerText();
       await first.click();
@@ -121,7 +243,7 @@ for (const viewport of [
       await expect(phase2Toggle).toHaveAttribute('aria-expanded', 'false');
       await phase2Toggle.click();
       await expect(sidebar.locator('.toc-link.level-1')).toHaveCount(9);
-      await expect(sidebar.locator('.toc-link.level-2')).toHaveCount(31);
+      await expect(sidebar.locator('.toc-link.level-2')).toHaveCount(28);
       const first = sidebar.locator('.toc-link.level-2').nth(0);
       const firstText = await first.innerText();
       await first.click();
@@ -192,7 +314,7 @@ test('active section stays shared across desktop, mobile, and manual scrolling',
     '18. Action Plan Training',
   );
 });
-test('current Word download is valid and legacy Word URLs remain 404', async ({ request }) => {
+test('pending Word artifact stays intact while legacy Word URLs remain 404', async ({ request }) => {
   const current = await request.get(`${BASE_URL}/downloads/huong-dan-qaqc.docx`);
   expect(current.status()).toBe(200);
   const currentBytes = await current.body();
